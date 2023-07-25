@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.64.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "recursive-readdir-sync": "^1.0.6"
+  }
+}
