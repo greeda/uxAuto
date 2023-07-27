@@ -1,10 +1,5 @@
-main {
-  padding: 20px;
-}
-
 .table-container {
   overflow: hidden;
-  border: 1px solid #000000;
 }
 
 .table-scroll-inner {
@@ -13,12 +8,13 @@ main {
 }
 
 .cl-header {
-  padding: 40px 40px;
-  border: 1px solid #000000;
-  border-bottom: none;
+  padding: 1.6rem 2rem;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 .cl-header h1 {
-  font-size: 60px;
+  font-size: 2.4rem;
+  text-align: center;
 }
 
 .cl-table {
@@ -29,45 +25,21 @@ main {
 }
 .cl-table tr th {
   text-align: center;
-  background-color: lightblue;
+}
+.cl-table tr:hover {
+  background-color: lightgray;
 }
 .cl-table tr th,
 .cl-table tr td {
-  padding: 5px 10px;
-  border: 1px solid #000000;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+.cl-table tr th:last-child,
+.cl-table tr td:last-child {
+  border-right: none;
 }
 
 .tac {
   text-align: center;
-}
-
-.prototype-menu {
-  margin: 20px 0;
-}
-.prototype-menu ul {
-  display: flex;
-}
-.prototype-menu ul li {
-  position: relative;
-  width: 150px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.prototype-menu ul li::before {
-  position: absolute;
-  left: 0;
-  content: "";
-  width: 1px;
-  height: 15px;
-  margin-right: 20px;
-  border-left: 1px solid #000000;
-}
-.prototype-menu ul li:first-child::before {
-  display: none;
-}
-.prototype-menu ul li a {
-  padding: 20px;
-  font-size: 18px;
-  text-decoration: underline;
 }

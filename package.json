@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
+    "gulp-cli": "^2.3.0",
     "recursive-readdir-sync": "^1.0.6"
   }
 }

@@ -1,27 +1,21 @@
-
-
-main {
-  padding: 20px;
-}
-
-
-
 .table-container {
   overflow: hidden;
-  border:1px solid #000000;
+  // border:1px solid #000000;
 }
+
 .table-scroll-inner {
-  width:100%;
+  width: 100%;
   overflow-y: auto;
 }
 
 .cl-header {
-  padding: 40px 40px;
-  border: 1px solid #000000;
-  border-bottom: none;
+  padding: 1.6rem 2rem;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 
   h1 {
-    font-size: 60px;
+    font-size: 2.4rem;
+    text-align: center;
   }
 }
 
@@ -30,58 +24,31 @@ main {
   width: 100%;
   font-size: 1.4rem;
   border-collapse: collapse;
-  
+
 
   tr th {
     text-align: center;
-    background-color: lightblue;
+    // background-color: lightblue;
   }
+
+  tr {
+    &:hover {
+      background-color: lightgray;
+    }
+  }
+
   tr th,
   tr td {
-    padding: 5px 10px;
-    border: 1px solid #000000;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+
+    &:last-child {
+      border-right: none;
+    }
   }
-  
 }
 
 .tac {
   text-align: center;
 }
-
-.prototype-menu {
-  margin: 20px 0;
-  
-  ul {
-    display: flex;
-    li {
-      position: relative;
-      width: 150px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-
-      &::before {
-        position: absolute;
-        left: 0;
-        content: '';
-        width:1px;
-        height: 15px;
-        margin-right: 20px;
-        border-left: 1px solid #000000;
-      }
-
-      &:first-child {
-        &::before {
-          display: none;
-        }
-      }
-
-      a {
-        padding: 20px;
-        font-size: 18px;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-

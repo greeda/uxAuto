@@ -6,18 +6,18 @@
   <title>코딩리스트</title>
   <link rel="stylesheet" href="/src/css/reset.css" type="text/css">
   <link rel="stylesheet" href="/src/css/codinglist.css" type="text/css">
+  <link rel="stylesheet" href="/src/css/prototype.css" type="text/css">
 </head>
 <body>
-  <main>
-    @@include('../html/_prototype/prototype_menu.html')
+  <main class="cl-main">
     <header class="cl-header">
       <h1>프로젝트 코딩리스트</h1>
     </header>
+    @@include('../html/_prototype/prototype_menu.html')
     <div class="table-container">
       <div class="table-scroll-inner">
         <!-- pages -->
         @@include('../html/_extends/cl_pages.html')
-        
       </div>
     </div>
     
