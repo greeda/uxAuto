@@ -7,6 +7,8 @@ const cheerio = require('cheerio');
 var recursiveReadSync = require('recursive-readdir-sync');
 var path = require('path');
 var projectRoot = path.resolve(__dirname, 'dev');
+var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
 
 var paths = {
   styles: {
@@ -33,6 +35,33 @@ gulp.task('sass', function(){
 gulp.task('copy:images', function(){
   return gulp.src('dev/src/images/**/*')
     .pipe(gulp.dest('dist/src/images'));
+});
+
+gulp.task('copy:js', function() {
+  return gulp.src('dev/src/js/**/*')
+    .pipe(gulp.dest('dist/src/js'));
+});
+
+gulp.task('js-watch', gulp.series('copy:js', function(done) {
+  browserSync.reload();
+  done();
+}));
+
+gulp.task('minify:js', function() {
+  return gulp.src(['dev/src/js/**/*.js', '!dev/src/js/lib/**'])
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/src/js'));
+});
+
+gulp.task('babel:js', function() {
+  return gulp.src('dev/src/js/**/*')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('dist/src/js'));
 });
 
 // 폰트 파일 복사
@@ -94,6 +123,7 @@ gulp.task('html', function () {
 gulp.task('serve', gulp.series('insertContent', function() {
   gulp.watch('./dev/src/css/*.scss', gulp.series('sass'));
   gulp.watch('./dev/**/*.html', gulp.series('html', 'insertContent'));
+  gulp.watch('./dev/src/js/**/*.js', gulp.series('js-watch'));
   gulp.watch('./dev/src/html/_extends/*.html', gulp.series('insertContent'));
 
   browserSync.init({
@@ -108,7 +138,8 @@ gulp.task('serve', gulp.series('insertContent', function() {
 gulp.task('watch', function(){
   gulp.watch('./dev/src/css/*.scss', gulp.series('sass', browserSync.reload));
   gulp.watch('./dev/**/*.html', gulp.series('html', 'insertContent', browserSync.reload));
+  gulp.watch('./dev/src/js/**/*.js', gulp.series('copy:js', browserSync.reload));
   gulp.watch('./dev/src/html/_extends/*.html', gulp.series('insertContent', browserSync.reload));
 });
 
-gulp.task('default', gulp.series('sass', 'html', 'insertContent', 'copy:images', 'copy:fonts', 'serve'));
+gulp.task('default', gulp.series('sass', 'html', 'insertContent', 'copy:images', 'copy:fonts', 'copy:js', 'serve'));
