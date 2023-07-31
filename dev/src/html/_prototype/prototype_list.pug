@@ -1,0 +1,57 @@
+extends ../_extends/extends_html5_prototype.pug
+
+block content
+  main
+    header.cl-header
+      h1 프로토타입
+    .prototype-menu
+      ul
+        li
+          a(href="/src/html/cl.html") 페이지 리스트
+        li.active
+          a(href="/src/html/_prototype/prototype_list.html") 프로토타입
+        li
+          a(href="/src/html/_prototype/prototype_layout.html") 레이아웃
+        li
+          a(href="/src/html/_prototype/prototype_form.html") 폼 양식
+        li
+          a(href="/src/html/_prototype/prototype_components_list.html") 컴포넌트
+    .prototype-list
+      ul
+        li.active
+          a(href="#title") Title
+        li
+          a(href="#fonts") Fonts
+        li
+          a(href="#") Buttons
+        li
+          a(href="#") Input
+    .prototype-container
+      section#title.prototype-section
+        p.subsrc #타이틀 태그 내 서브 텍스트가 있을 경우 수정 예정
+        h1.title-h1 타이틀 H1
+        h2.title-h2 타이틀 H2
+        h3.title-h3 타이틀 H3
+        h4.title-h4 타이틀 H4
+        pre
+          code
+            <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">h1.title-h1&nbsp;타이틀&nbsp;H1</div><div style="padding:0 6px; white-space:pre; line-height:130%">h2.title-h2&nbsp;타이틀&nbsp;H2</div><div style="padding:0 6px; white-space:pre; line-height:130%">h3.title-h3&nbsp;타이틀&nbsp;H3</div><div style="padding:0 6px; white-space:pre; line-height:130%">h4.title-h4&nbsp;타이틀&nbsp;H4</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+
+    .prototype-container
+      section#fonts.prototype-section
+        p.subsrc #자주 사용되는 폰트 스타일 정의
+        p.font-style-28
+          | 동해물과 백두산이 마르고 닳도록...
+        p.font-style-24
+          | 동해물과 백두산이 마르고 닳도록...
+        p.font-style-18
+          | 동해물과 백두산이 마르고 닳도록...
+        p.font-style-16
+          | 동해물과 백두산이 마르고 닳도록...
+        p.font-style-14
+          | 동해물과 백두산이 마르고 닳도록...
+        p.font-style-12
+          | 동해물과 백두산이 마르고 닳도록...
+        pre
+          code
+            <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">p.font-style-28</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;동해물과&nbsp;백두산이&nbsp;마르고&nbsp;닳도록...</div><div style="padding:0 6px; white-space:pre; line-height:130%">p.font-style-24</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;동해물과&nbsp;백두산이&nbsp;마르고&nbsp;닳도록...</div><div style="padding:0 6px; white-space:pre; line-height:130%">p.font-style-18</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;동해물과&nbsp;백두산이&nbsp;마르고&nbsp;닳도록...</div><div style="padding:0 6px; white-space:pre; line-height:130%">p.font-style-16</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;동해물과&nbsp;백두산이&nbsp;마르고&nbsp;닳도록...</div><div style="padding:0 6px; white-space:pre; line-height:130%">p.font-style-14</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;동해물과&nbsp;백두산이&nbsp;마르고&nbsp;닳도록...</div><div style="padding:0 6px; white-space:pre; line-height:130%">p.font-style-12</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;동해물과&nbsp;백두산이&nbsp;마르고&nbsp;닳도록...</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>

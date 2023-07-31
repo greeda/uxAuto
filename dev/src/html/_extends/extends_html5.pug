@@ -1,0 +1,15 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    link(rel="stylesheet", href="/src/css/common.css" type="text/css")
+  body
+    include ../_includes/header.pug
+
+    div#container
+      block content
+
+    include ../_includes/footer.pug
+    

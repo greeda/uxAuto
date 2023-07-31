@@ -1,4 +1,66 @@
 @charset "UTF-8";
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url("../woff2/Pretendard-Black.woff2") format("woff2"), url("../woff/Pretendard-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("../woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("../woff/Pretendard-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("../woff2/Pretendard-Bold.woff2") format("woff2"), url("../woff/Pretendard-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("../woff2/Pretendard-SemiBold.woff2") format("woff2"), url("../woff/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("../woff2/Pretendard-Medium.woff2") format("woff2"), url("../woff/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("../woff2/Pretendard-Regular.woff2") format("woff2"), url("../woff/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("../woff2/Pretendard-Light.woff2") format("woff2"), url("../woff/Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("../woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("../woff/Pretendard-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("../woff2/Pretendard-Thin.woff2") format("woff2"), url("../woff/Pretendard-Thin.woff") format("woff");
+}
 /*! reset */
 *,
 *::before,
@@ -12,10 +74,10 @@ html {
   font-weight: 400;
 }
 html:lang(ko) {
-  font-family: "Malgun Gothic", "맑은 고딕", Dotum, "돋움", arial, verdana, sans-serif;
+  font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", arial, verdana, sans-serif;
 }
 html:lang(en) {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Pretendard", Helvetica, Arial, sans-serif;
 }
 html:lang(ja) {
   font-family: "Meiryo", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
@@ -24,16 +86,16 @@ html:lang(zh) {
   font-family: Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
 }
 html:lang(ko) {
-  line-height: 1.15;
+  line-height: 100%;
 }
 html:lang(en) {
-  line-height: 1.15;
+  line-height: 100%;
 }
 html:lang(ja) {
-  line-height: 1.15;
+  line-height: 100%;
 }
 html:lang(zh) {
-  line-height: 1.15;
+  line-height: 100%;
 }
 html:lang(ko) {
   word-break: keep-all;

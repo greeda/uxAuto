@@ -1,0 +1,16 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    link(rel="stylesheet", href="/src/css/reset.css" type="text/css")
+    link(rel="stylesheet", href="/src/css/codinglist.css" type="text/css")
+    link(rel="stylesheet", href="/src/css/prototype.css" type="text/css")
+  body
+
+    div#container
+      block content
+    
+block script
+  script(type="module", src="/src/js/common.ui.js") 

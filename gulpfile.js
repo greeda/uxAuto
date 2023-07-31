@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var pug = require('gulp-pug');
 const sass = require('gulp-sass')(require('sass'));
 var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync').create();
@@ -70,49 +71,16 @@ gulp.task('copy:fonts', function(){
     .pipe(gulp.dest('dist/src/fonts'));
 });
 
-gulp.task('extendsHtml', function() {
-  return gulp.src('dev/src/html/_extends/extends_html5.html')
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: projectRoot
-    }))
-    .pipe(gulp.dest('dist/src/html/_extends'));
+gulp.task('views', function buildHTML() {
+  return gulp.src('dev/src/html/**/*.pug')
+  .pipe(pug({
+    pretty: true
+  }))
+  .pipe(gulp.dest('./dist/src/html'));
 });
 
-gulp.task('insertContent', gulp.series('extendsHtml', function(callback) {
-  const extendsHtml = fs.readFileSync('dist/src/html/_extends/extends_html5.html', 'utf8');
-  const $extends = cheerio.load(extendsHtml);
-
-  try {
-    let files = recursiveReadSync('dist/src/html');
-    files.forEach(file => {
-      if (file.endsWith('.html')) {
-        const fileContent = fs.readFileSync(file, 'utf8');
-        const $ = cheerio.load(fileContent);
-        const container = $('#container');
-
-        if (container.length) {
-          const content = container.html();
-          $extends('#container').html(content);
-          fs.writeFileSync(file, $extends.html(), 'utf8');
-        }
-      }
-    });
-
-    callback();
-  } catch(err){
-    if(err.errno === 34){
-      console.log('Path does not exist');
-    } else {
-      throw err;
-    }
-
-    callback(err);
-  }
-}));
-
 gulp.task('html', function () {
-  return gulp.src(['dev/**/*.html', '!dev/src/html/_extends/**']) // excludes _extends directory
+  return gulp.src(['dev/**/*.html', '!dev/src/html/_extends/**'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -120,11 +88,23 @@ gulp.task('html', function () {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('serve', gulp.series('insertContent', function() {
-  gulp.watch('./dev/src/css/*.scss', gulp.series('sass'));
-  gulp.watch('./dev/**/*.html', gulp.series('html', 'insertContent'));
-  gulp.watch('./dev/src/js/**/*.js', gulp.series('js-watch'));
-  gulp.watch('./dev/src/html/_extends/*.html', gulp.series('insertContent'));
+gulp.task('reload', function (done) {
+  browserSync.reload();
+  done();
+});
+
+gulp.task('watch', function(){
+  gulp.watch('./dev/src/css/*.scss', gulp.series('sass', 'reload'));
+  gulp.watch('./dev/**/*.html', gulp.series('html', 'reload'));
+  gulp.watch('./dev/**/*.pug', gulp.series('views', 'reload'));
+  gulp.watch('./dev/src/js/**/*.js', gulp.series('copy:js', 'reload'));
+});
+
+gulp.task('serve', function() {
+  gulp.watch('./dev/src/css/*.scss', gulp.series('sass', 'reload'));
+  gulp.watch('./dev/**/*.html', gulp.series('html', 'reload'));
+  gulp.watch('./dev/**/*.pug', gulp.series('views', 'reload'));
+  gulp.watch('./dev/src/js/**/*.js', gulp.series('js-watch', 'reload'));
 
   browserSync.init({
       server: {
@@ -133,13 +113,8 @@ gulp.task('serve', gulp.series('insertContent', function() {
       },
       port: 8888
   });
-}));
-
-gulp.task('watch', function(){
-  gulp.watch('./dev/src/css/*.scss', gulp.series('sass', browserSync.reload));
-  gulp.watch('./dev/**/*.html', gulp.series('html', 'insertContent', browserSync.reload));
-  gulp.watch('./dev/src/js/**/*.js', gulp.series('copy:js', browserSync.reload));
-  gulp.watch('./dev/src/html/_extends/*.html', gulp.series('insertContent', browserSync.reload));
 });
 
-gulp.task('default', gulp.series('sass', 'html', 'insertContent', 'copy:images', 'copy:fonts', 'copy:js', 'serve'));
+
+
+gulp.task('default', gulp.series('sass', 'html', 'copy:images', 'copy:fonts', 'copy:js', 'views', 'serve'));
