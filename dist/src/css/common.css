@@ -11,55 +11,55 @@ http://scripts.sil.org/OFL
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard Black"), url("../woff2/Pretendard-Black.woff2") format("woff2"), url("../woff/Pretendard-Black.woff") format("woff");
+  src: local("Pretendard Black"), url("/src/font/woff2/Pretendard-Black.woff2") format("woff2"), url("/src/font/woff/Pretendard-Black.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url("../woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("../woff/Pretendard-ExtraBold.woff") format("woff");
+  src: local("Pretendard ExtraBold"), url("/src/font/woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("/src/font/woff/Pretendard-ExtraBold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("../woff2/Pretendard-Bold.woff2") format("woff2"), url("../woff/Pretendard-Bold.woff") format("woff");
+  src: local("Pretendard Bold"), url("/src/font/woff2/Pretendard-Bold.woff2") format("woff2"), url("/src/font/woff/Pretendard-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("../woff2/Pretendard-SemiBold.woff2") format("woff2"), url("../woff/Pretendard-SemiBold.woff") format("woff");
+  src: local("Pretendard SemiBold"), url("/src/font/woff2/Pretendard-SemiBold.woff2") format("woff2"), url("/src/font/woff/Pretendard-SemiBold.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("../woff2/Pretendard-Medium.woff2") format("woff2"), url("../woff/Pretendard-Medium.woff") format("woff");
+  src: local("Pretendard Medium"), url("/src/font/woff2/Pretendard-Medium.woff2") format("woff2"), url("/src/font/woff/Pretendard-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("../woff2/Pretendard-Regular.woff2") format("woff2"), url("../woff/Pretendard-Regular.woff") format("woff");
+  src: local("Pretendard Regular"), url("/src/font/woff2/Pretendard-Regular.woff2") format("woff2"), url("/src/font/woff/Pretendard-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("../woff2/Pretendard-Light.woff2") format("woff2"), url("../woff/Pretendard-Light.woff") format("woff");
+  src: local("Pretendard Light"), url("/src/font/woff2/Pretendard-Light.woff2") format("woff2"), url("/src/font/woff/Pretendard-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url("../woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("../woff/Pretendard-ExtraLight.woff") format("woff");
+  src: local("Pretendard ExtraLight"), url("/src/font/woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("/src/font/woff/Pretendard-ExtraLight.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("../woff2/Pretendard-Thin.woff2") format("woff2"), url("../woff/Pretendard-Thin.woff") format("woff");
+  src: local("Pretendard Thin"), url("/src/font/woff2/Pretendard-Thin.woff2") format("woff2"), url("/src/font/woff/Pretendard-Thin.woff") format("woff");
 }
 /*! reset */
 *,
@@ -414,6 +414,11 @@ template {
   padding: 3rem;
 }
 
+.partition {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #E4E4E4;
+}
+
 .subsrc {
   display: block;
   font-size: 3.6rem;
@@ -422,10 +427,36 @@ template {
   margin: 1.5rem 0;
   color: lightslategray;
 }
+.subsrc .caption {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 100%;
+  color: #444444;
+}
+
+.explain {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 1.5rem 0;
+}
+
+.prototype-menu {
+  top: 58px;
+}
+
+.prototype-list {
+  top: 101px;
+}
 
 .prototype-menu,
 .prototype-list {
+  position: sticky;
   border-bottom: 1px solid #000000;
+  background-color: #ffffff;
+  z-index: 1;
 }
 .prototype-menu ul,
 .prototype-list ul {
@@ -509,6 +540,14 @@ pre {
   letter-spacing: -1px;
   color: #444444;
 }
+.font-style-28.bold,
+.font-style-24.bold,
+.font-style-18.bold,
+.font-style-16.bold,
+.font-style-14.bold,
+.font-style-12.bold {
+  font-weight: 700;
+}
 
 .font-style-28 {
   font-size: 2.8rem;
@@ -538,4 +577,264 @@ pre {
 .font-style-12 {
   font-size: 1.2rem;
   line-height: 100%;
+}
+
+.ui-input {
+  display: inline-flex;
+}
+.ui-input input[type=checkbox] {
+  display: none;
+}
+.ui-input input[type=checkbox]:checked + label::before {
+  content: "✓";
+  color: #ffffff;
+  font-size: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #0095F8;
+}
+.ui-input input[type=checkbox] + label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.ui-input input[type=checkbox] + label::before {
+  display: inline-flex;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  background-color: #F1F4F8;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.ui-input label::before {
+  margin-right: 1rem;
+}
+.ui-input.no-lable input[type=checkbox] {
+  display: none;
+}
+.ui-input.no-lable input[type=checkbox]:checked + label {
+  background-color: #0095F8;
+}
+.ui-input.no-lable input[type=checkbox]:checked + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  content: "✓";
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  justify-content: center;
+  align-items: center;
+}
+.ui-input.no-lable label {
+  position: relative;
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #F1F4F8;
+  cursor: pointer;
+}
+.ui-input.no-lable label::before {
+  display: none;
+  margin-right: 0;
+}
+.ui-input.label-right label {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+.ui-input.label-right label::before {
+  margin-left: 1rem;
+}
+.ui-input.type-square input[type=checkbox]:checked + label {
+  border-radius: 0.2rem;
+}
+.ui-input.type-square input[type=checkbox]:checked + label::before {
+  border-radius: 0.2rem;
+}
+.ui-input.type-square label {
+  border-radius: 0.2rem;
+}
+.ui-input.type-square label::before {
+  border-radius: 0.2rem;
+}
+
+#header {
+  width: 100%;
+  height: 7.2rem;
+  background-color: #ffffff;
+}
+#header .header-inner {
+  display: flex;
+  height: 100%;
+  padding: 0 5rem;
+  justify-content: space-between;
+}
+#header .logo,
+#header .header-gnb {
+  display: inline-flex;
+  align-items: center;
+}
+#header .title-h1 {
+  display: flex;
+}
+#header .title-h1 img {
+  width: 12rem;
+}
+#header .menu-box {
+  display: flex;
+}
+#header .menu-box .menu-list {
+  display: inline-flex;
+}
+#header .menu-box .menu-list a {
+  display: inline-flex;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+#header .menu-box .menu-list.on a {
+  margin-left: 2rem;
+  padding: 0.5rem 3.2rem;
+  color: #ffffff;
+  border-radius: 20rem;
+  background-color: #ed6c71;
+}
+
+#footer {
+  background-color: #23282C;
+}
+#footer .footer-inner .contents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .footer-inner .contents.block {
+  display: block;
+}
+#footer .footer-inner .contents.top {
+  border-bottom: 1px solid #2E3438;
+}
+#footer .footer-inner .contents.top .contents-inner {
+  padding: 1.9rem 0 1.5rem;
+}
+#footer .footer-inner .contents .contents-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 129.6rem;
+  margin: 0 auto;
+}
+#footer .footer-inner .contents:nth-child(2) .contents-inner {
+  display: block;
+  padding: 2.7rem 0 6.8rem;
+}
+#footer .footer-inner .footer-logo {
+  margin-bottom: 0.9rem;
+}
+#footer .footer-inner .footer-logo img {
+  width: 12rem;
+}
+#footer .footer-inner .footer-content {
+  display: inline-flex;
+}
+#footer .footer-inner .footer-content .footer-content-list {
+  display: inline-flex;
+  align-items: center;
+}
+#footer .footer-inner .footer-content .footer-content-list a {
+  display: inline-flex;
+  padding: 1rem 1.5rem 1rem 0;
+  color: #C2C5C9;
+}
+#footer .footer-inner .footer-content .footer-content-list a:hover {
+  color: #ffffff;
+}
+#footer .footer-inner .footer-content .footer-content-list a::before {
+  display: inline-flex;
+  content: "";
+  width: 1px;
+  height: 1.2 rem;
+  margin-right: 1.5rem;
+  background: #40484F;
+}
+#footer .footer-inner .footer-content .footer-content-list:first-child a::before {
+  display: none;
+}
+#footer .footer-inner .family-box-area {
+  display: inline-flex;
+}
+#footer .footer-inner .family-box-area .ui-select {
+  display: inline-flex;
+  border: 1px solid #444444;
+  border-radius: 0.8rem;
+  background-color: #16191C;
+}
+#footer .footer-inner .family-box-area .ui-select .btn-select {
+  padding: 1.1rem 14.6rem 1.1rem 2rem;
+  color: #6D757C;
+  font-weight: 600;
+}
+#footer .footer-inner .family-box-area .ui-select .select-box {
+  display: none;
+}
+#footer .footer-inner .company-info .contac a {
+  color: #6D757C;
+}
+#footer .footer-inner .company-info .tel {
+  font-weight: 700;
+}
+#footer .footer-inner .company-info .tel span {
+  display: inline-block;
+  margin-right: 0.6rem;
+  font-weight: 500;
+  color: #6D757C;
+}
+#footer .footer-inner .company-info .mail {
+  display: inline-flex;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+#footer .footer-inner .company-info .mail::before {
+  display: inline-flex;
+  content: "";
+  width: 1px;
+  height: 1.2 rem;
+  margin-right: 1rem;
+  background: #40484F;
+}
+#footer .footer-inner .address-1 ul,
+#footer .footer-inner .address-2 ul {
+  display: flex;
+}
+#footer .footer-inner .address-1 ul li,
+#footer .footer-inner .address-2 ul li {
+  display: inline-flex;
+  padding: 0.3rem 1rem 0.3rem 0;
+  color: #6D757C;
+}
+#footer .footer-inner .address-1 ul li::before,
+#footer .footer-inner .address-2 ul li::before {
+  display: inline-flex;
+  content: "";
+  width: 1px;
+  height: 1.2 rem;
+  margin-right: 1rem;
+  background: #40484F;
+}
+#footer .footer-inner .address-1 ul li:first-child::before,
+#footer .footer-inner .address-2 ul li:first-child::before {
+  display: none;
+}
+#footer .footer-inner .address-1 ul li a,
+#footer .footer-inner .address-2 ul li a {
+  color: #6D757C;
+}
+#footer .footer-inner .address-1 ul li a:hover,
+#footer .footer-inner .address-2 ul li a:hover {
+  color: #ffffff;
 }
