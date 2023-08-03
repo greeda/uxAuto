@@ -86,16 +86,16 @@ html:lang(zh) {
   font-family: Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
 }
 html:lang(ko) {
-  line-height: 100%;
+  line-height: 1.4;
 }
 html:lang(en) {
-  line-height: 100%;
+  line-height: 1.4;
 }
 html:lang(ja) {
-  line-height: 100%;
+  line-height: 1.4;
 }
 html:lang(zh) {
-  line-height: 100%;
+  line-height: 1.4;
 }
 html:lang(ko) {
   word-break: keep-all;

@@ -97,14 +97,12 @@
 .title-h3 {
   font-size: 3.6rem;
   line-height: 100%;
-  letter-spacing: -1px;
   font-weight: 700;
 }
 
 .title-h4 {
   font-size: 3.4rem;
   line-height: 100%;
-  letter-spacing: -1px;
   font-weight: 700;
 }
 
@@ -126,7 +124,7 @@ pre {
   font-style: normal;
   text-decoration: none;
   list-style: none;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   color: #444444;
 }
 .font-style-28.bold,
@@ -140,32 +138,26 @@ pre {
 
 .font-style-28 {
   font-size: 2.8rem;
-  line-height: 100%;
 }
 
 .font-style-24 {
   font-size: 2.4rem;
-  line-height: 100%;
 }
 
 .font-style-18 {
   font-size: 1.8rem;
-  line-height: 100%;
 }
 
 .font-style-16 {
   font-size: 1.6rem;
-  line-height: 100%;
 }
 
 .font-style-14 {
   font-size: 1.4rem;
-  line-height: 100%;
 }
 
 .font-style-12 {
   font-size: 1.2rem;
-  line-height: 100%;
 }
 
 .ui-input {
