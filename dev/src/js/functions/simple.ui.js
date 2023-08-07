@@ -10,3 +10,29 @@ export function clTabsHandler() {
     });
   });
 }
+
+export function familySiteSelectHandler() {
+  const footerEl = document.querySelector('#footer');
+  const selectBtn = document.querySelector('.ui-select .btn-select');
+  let isActive = false;
+  
+  if(footerEl) {
+    selectBtn.addEventListener('click', (e) => {
+      isActive = !isActive;
+      bindEvents(isActive);
+    });
+  
+    selectBtn.addEventListener('focusout', (e) => {
+      isActive = false;
+      bindEvents(isActive);
+    });
+  
+    function bindEvents(isActive) {
+      if(isActive){
+        selectBtn.parentNode.classList.add('active');
+      } else {
+        selectBtn.parentNode.classList.remove('active')
+      }
+    };
+  }
+}

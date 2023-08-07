@@ -3,6 +3,9 @@ extends ../_extends/extends_html5.pug
 block variables
   - var title = '메인 페이지'
 
+block css
+  link(rel="stylesheet", href="/src/css/main.css")
+
 block content  
-  main(role="main")
+  main#main(role="main")
     | 메인 페이지

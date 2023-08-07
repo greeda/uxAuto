@@ -10,7 +10,7 @@
     <header id="header">
       <div class="header-inner">
         <div class="logo">
-          <h1 class="title-h1"><img src="/src/images/icons/logo_black.png" alt="FASTFIVE LOGO"></h1>
+          <h1 class="title-h1"><a href="#"> <img src="/src/images/icons/logo_black.png" alt="FASTFIVE LOGO"></a></h1>
         </div>
         <gnb class="header-gnb">
           <button class="button-gnb" type="button"></button>
@@ -23,7 +23,7 @@
         </gnb>
       </div>
     </header>
-    <div id="container">
+    <div id="container"><a class="skipnav" href="#main">주요 콘텐츠로 건너뛰기</a>
     </div>
     <footer id="footer">
       <div class="footer-inner">
@@ -39,15 +39,18 @@
             <div class="family-box-area">
               <div class="ui-select">
                 <button class="btn-select font-style-14" type="button">패밀리 사이트</button>
-                <ul class="select-box">
-                  <li class="select-list font-style-14"><a href="#">파이브스팟</a></li>
-                  <li class="select-list font-style-14"><a href="#">모버스 </a></li>
-                  <li class="select-list font-style-14"><a href="#">빌딩 솔루션</a></li>
-                  <li class="select-list font-style-14"><a href="#">거점오피스</a></li>
-                  <li class="select-list font-style-14"><a href="#">파이브클라우드 </a></li>
-                  <li class="select-list font-style-14"><a href="#">파이브애드</a></li>
-                  <li class="select-list font-style-14"><a href="#">패밀리 사이트</a></li>
-                </ul>
+                <div class="select-area">
+                  <ul class="select-box">
+                    <li class="select-list font-style-14"><a href="#">커스텀 오피스</a></li>
+                    <li class="select-list font-style-14"><a href="#">파이브스팟</a></li>
+                    <li class="select-list font-style-14"><a href="#">모버스</a></li>
+                    <li class="select-list font-style-14"><a href="#">하이픈디자인</a></li>
+                    <li class="select-list font-style-14"><a href="#">빌딩 솔루션 </a></li>
+                    <li class="select-list font-style-14"><a href="#">거점오피스</a></li>
+                    <li class="select-list font-style-14"><a href="#">파이브클라우드</a></li>
+                    <li class="select-list font-style-14"><a href="#">파이브에드</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -89,5 +92,21 @@
         </section>
       </div>
     </footer>
+    <aside class="quick-menu">
+      <div class="aside-inner">
+        <ul class="aside-menu">
+          <li class="menu-list active"><a href="#"><i class="ico" aria-hidden="true"></i>
+              <p class="font-style-18">무료 견적</p></a></li>
+          <li class="menu-list"><a href="#"><i class="ico" aria-hidden="true"></i>
+              <p class="font-style-18">상담 신청</p></a></li>
+          <li class="menu-list"><a href="tel:1833-5550"><i class="ico" aria-hidden="true"></i>
+              <p class="font-style-18">1833-5550</p></a></li>
+        </ul>
+        <div class="btn-area">
+          <button class="btn-top" type="button"></button>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
+<script type="module" src="/src/js/common.ui.js"> </script>

@@ -1,6 +1,7 @@
 import commonUiList from './common.ui.list.js';
 import {
-  clTabsHandler
+  clTabsHandler,
+  familySiteSelectHandler
 } from './functions/simple.ui.js';
 
 let frontUI = {
@@ -12,6 +13,7 @@ window.frontUI = frontUI;
 
 function init() {
   clTabsHandler();
+  familySiteSelectHandler();
 };
 
 
