@@ -23,3 +23,10 @@ block content
         .table-scroll-inner
           // pages
           include ./_extends/cl_pages.pug
+block script
+  script.
+    const tdNumber = document.querySelectorAll('td.no');
+
+    tdNumber.forEach((tdList, index) => {
+      tdList.innerText = index + 1;
+    });

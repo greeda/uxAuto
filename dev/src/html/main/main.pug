@@ -1,6 +1,8 @@
 extends ../_extends/extends_html5.pug  
 
 block variables
+  - var ogTitle = ''
+  - var ogDescription = ''
   - var title = '메인 페이지'
 
 block css
@@ -8,4 +10,22 @@ block css
 
 block content  
   main#main(role="main")
-    | 메인 페이지
+    section.visual-top 
+      .contents-inner
+
+    .contents
+      .snb-area
+        ul.snb
+          li.snb-list
+            a(href="#")
+              strong.font-style-18 무료 견적
+              span.font-style-14 비용이 궁금하다면
+          li.snb-list
+            a(href="#")
+              strong.font-style-18 상담 신청
+              span.font-style-14 맞춤 상담을 원한다면
+          li.snb-list
+            a(href="#")
+              strong.font-style-18 관심 등록
+              span.font-style-14 오픈/할인 소식 알림은
+      .contents-inner

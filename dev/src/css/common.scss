@@ -490,3 +490,26 @@
     }
   }
 }
+
+.visual-top {
+  width: 100%;
+  height: 48.4rem;
+  background-color: lightpink;
+
+  &::after {
+    content:"Visual Top";
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 3.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contents-inner {
+  width: 100%;
+  max-width: 129.6rem;
+  display: flex;
+  justify-content: center;
+}

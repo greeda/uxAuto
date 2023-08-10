@@ -5,7 +5,7 @@
 
 .partition {
   padding: 1.5rem 0;
-  border-bottom: 1px solid #E4E4E4;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .subsrc {
@@ -33,11 +33,11 @@
 }
 
 .prototype-menu {
-  top: 58px;
+  top: 5.8rem;
 }
 
 .prototype-list {
-  top: 101px;
+  top: 11.1rem;
 }
 
 .prototype-menu,
@@ -172,7 +172,7 @@ pre {
   font-size: 1.4rem;
   justify-content: center;
   align-items: center;
-  background-color: #0095F8;
+  background-color: #0095f8;
 }
 .ui-input input[type=checkbox] + label {
   display: inline-flex;
@@ -185,7 +185,7 @@ pre {
   width: 2rem;
   height: 2rem;
   font-size: 1.4rem;
-  background-color: #F1F4F8;
+  background-color: #f1f4f8;
   border-radius: 50%;
   cursor: pointer;
   box-sizing: content-box;
@@ -193,13 +193,13 @@ pre {
 .ui-input label::before {
   margin-right: 1rem;
 }
-.ui-input.no-lable input[type=checkbox] {
+.ui-input.no-label input[type=checkbox] {
   display: none;
 }
-.ui-input.no-lable input[type=checkbox]:checked + label {
-  background-color: #0095F8;
+.ui-input.no-label input[type=checkbox]:checked + label {
+  background-color: #0095f8;
 }
-.ui-input.no-lable input[type=checkbox]:checked + label::before {
+.ui-input.no-label input[type=checkbox]:checked + label::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -212,16 +212,16 @@ pre {
   justify-content: center;
   align-items: center;
 }
-.ui-input.no-lable label {
+.ui-input.no-label label {
   position: relative;
   display: inline-flex;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: #F1F4F8;
+  background-color: #f1f4f8;
   cursor: pointer;
 }
-.ui-input.no-lable label::before {
+.ui-input.no-label label::before {
   display: none;
   margin-right: 0;
 }
@@ -243,4 +243,15 @@ pre {
 }
 .ui-input.type-square label::before {
   border-radius: 0.2rem;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background-color: beige;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background-color: bisque;
+  }
 }

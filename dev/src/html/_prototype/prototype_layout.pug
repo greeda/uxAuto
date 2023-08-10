@@ -19,6 +19,12 @@ block content
     
     .prototype-container
       section.prototype-section
+        p.subsrc # BreakPoints
+          i.caption Desktop : media (min-width: 1024px)
+          i.caption Tablet  : media (max-width: 1023px)
+          i.caption Mobile  : media (max-width: 767px)
+
+      section.prototype-section
         p.subsrc # Header
         include ../_includes/header.pug
       section.prototype-section
