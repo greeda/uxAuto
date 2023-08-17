@@ -1,4 +1,4 @@
-import UI from './base/UI';
+import UI from '/src/js/components/base/UI.js';
 
 class UISwiper extends UI {
   defaultOptions = {

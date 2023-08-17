@@ -11,6 +11,7 @@ main {
 }
 .snb-area .snb-list {
   display: flex;
+  width: 32rem;
   justify-content: center;
   align-items: center;
 }
@@ -19,16 +20,17 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 2.5rem 10.7rem;
+  padding: 1.8rem 0;
 }
 .snb-area .snb-list .font-style-18 {
   font-weight: 600;
 }
-.snb-area .snb-list .font-style-14 {
-  margin-top: 0.6rem;
+.snb-area .snb-list .font-style-16 {
+  margin-top: -0.4rem;
+  color: #777777;
 }
 .snb-area .snb-list .font-style-18,
-.snb-area .snb-list .font-style-14 {
+.snb-area .snb-list .font-style-16 {
   display: flex;
   justify-content: center;
   align-items: center;

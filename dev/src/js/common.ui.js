@@ -1,5 +1,6 @@
-import commonUiList from './common.ui.list.js';
+
 import {
+  refreshUI,
   clTabsHandler,
   familySiteSelectHandler
 } from './functions/simple.ui.js';
@@ -12,6 +13,7 @@ window.frontUI = frontUI;
 
 
 function init() {
+  refreshUI();
   clTabsHandler();
   familySiteSelectHandler();
 };
