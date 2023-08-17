@@ -1,3 +1,5 @@
+import commonUiList from '/src/js/common.ui.list.js';
+
 export function clTabsHandler() {
   const tabList = document.querySelectorAll(".prototype-list li");
   let activeList = document.querySelector(".prototype-list li.active");
@@ -38,5 +40,22 @@ export function familySiteSelectHandler() {
 }
 
 export function refreshUI(force = false) {
-    
+  commonUiList.forEach((ui) => {
+    $(ui.className)
+      .toArray()
+      .forEach((el) => {
+        if (force || !$(el).data("ui")) {
+          if ($(el).hasClass("ui-alert")) {
+            return;
+          }
+          if (!!$(el).data("ui")) {
+            $(el).data("ui").detachEvents();
+          }
+          const Class = ui.classObject;
+          const options = { ...$(el).data() };
+          const uiInstance = new Class(el, options);
+          $(el).data("ui", uiInstance);
+        }
+      });
+  });
 }

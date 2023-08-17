@@ -94,7 +94,7 @@
       &.on {
         height: 4rem;
         padding-right: 0;
-        
+
         a {
           padding: 0 3.2rem;
           color: #ffffff;
@@ -137,7 +137,7 @@
         border-bottom: 1px solid #2E3438;
 
         .contents-inner {
-          padding: 1.9rem 0 1.5rem;
+          padding: 1.6rem 0;
         }
       }
 
@@ -155,10 +155,11 @@
     }
 
     .footer-logo {
-      margin-bottom: 0.9rem;
+      display: inline-flex;
+      margin-bottom: 0.8rem;
 
       img {
-        width: 12rem;
+        width: 9.6em;
       }
     }
 
@@ -172,8 +173,9 @@
         a {
           display: inline-flex;
           align-items: center;
-          padding: 1rem 1.5rem 1rem 0;
-          color: #C2C5C9;
+          padding: 1rem 2rem 1rem 0;
+          color: #aaaaaa;
+          font-weight: 600;
 
           &:hover {
             color: #ffffff;
@@ -184,7 +186,7 @@
             content: "";
             width: 1px;
             height: 1.2rem;
-            margin-right: 1.5rem;
+            margin-right: 2rem;
             background: #40484F;
           }
         }
@@ -197,18 +199,23 @@
 
     .family-box-area {
       display: inline-flex;
+      width: 24rem;
 
       .ui-select {
         position: relative;
         display: inline-flex;
+        width: 100%;
         border: 1px solid #444444;
         border-radius: .8rem;
         background-color: #16191C;
+        transition: border-color .3s ease;
 
         .btn-select {
-          padding: 1.1rem 14.6rem 1.1rem 2rem;
+          width: 100%;
+          padding: .8rem 0 .8rem 2rem;
           color: #6D757C;
           font-weight: 600;
+          text-align: left;
         }
 
         .select-area {
@@ -216,11 +223,11 @@
             display: none;
             position: absolute;
             left: -1px;
-            bottom: 3.9rem;
+            bottom: 4rem;
             width: 100%;
-            height: 25.2rem;
+            height: 24rem;
             border: 1px solid #6D757C;
-            border-bottom: 1px solid #444444;
+            border-bottom: 1px solid #40484F;
             border-radius: .8rem .8rem 0 0;
             background-color: #16191C;
             box-sizing: content-box;
@@ -229,8 +236,9 @@
             .select-list {
               a {
                 display: flex;
-                padding: 1.1rem 2rem;
+                padding: .8rem 2rem;
                 color: #6D757C;
+                font-weight: 600;
 
                 &:hover {
                   color: #ffffff;
@@ -242,7 +250,7 @@
           &::after {
             position: absolute;
             top: 1.3rem;
-            right: 1.6rem;
+            right: 2rem;
             display: flex;
             content: "";
             width: 1.6rem;
@@ -272,36 +280,17 @@
 
     .company-info {
       .contac {
+        display: inline-flex;
+
         a {
           color: #6D757C;
           align-items: center;
         }
       }
 
-      .tel {
-        font-weight: 700;
-
-        span {
-          display: inline-block;
-          margin-right: .6rem;
-          font-weight: 500;
-          color: #6D757C;
-        }
-      }
-
       .mail {
         display: inline-flex;
-        font-weight: 500;
-        padding-left: 1rem;
-
-        &::before {
-          display: inline-flex;
-          content: "";
-          width: 1px;
-          height: 1.2rem;
-          margin-right: 1rem;
-          background: #40484F;
-        }
+        margin-left: 1.1rem;
       }
     }
 
@@ -314,14 +303,15 @@
 
         li {
           display: inline-flex;
-          padding-right: 1rem;
+          padding-right: 1.2rem;
           color: #6D757C;
+          align-items: center;
 
           &::before {
             display: inline-flex;
             content: "";
             width: 1px;
-            height: 1.2 rem;
+            height: 1.2rem;
             margin-right: 1rem;
             background: #40484F;
           }
@@ -353,11 +343,11 @@
 
       li {
         display: inline-flex;
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 2.8rem;
+        height: 2.8rem;
 
         &+li {
-          margin-left: 1.4rem;
+          margin-left: 1.2rem;
         }
 
         a {
@@ -425,22 +415,24 @@
 
           a p.font-style-18 {
             color: #ffffff;
+            font-weight: 600;
           }
         }
 
         a {
           display: flex;
-          padding: 2.6rem 0;
+          padding: 2.5rem 0;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          color: #444444;
 
           &::before {
             content: "";
             display: flex;
-            width: 2rem;
-            height: 2rem;
-            margin-bottom: .5rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            margin-bottom: .6rem;
           }
         }
 
@@ -511,9 +503,11 @@
         height: 100%;
         justify-content: center;
         align-items: center;
-        border: 1px solid #d9d9d9;
         border-radius: 50%;
         background-color: #ffffff;
+        fill: #ffffff;
+        stroke-width: 1px;
+        stroke: #D9D9D9;
         filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.08));
 
         &::after {
