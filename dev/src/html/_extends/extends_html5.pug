@@ -7,7 +7,7 @@ html(lang="ko")
     meta(property="og:title", content=ogTitle || "")
     meta(property="og:description", content=ogDescription || "")
     title #{title}
-    link(rel="stylesheet", href="/src/css/common.css" type="text/css")
+    link(rel="stylesheet", href=`${path}/src/css/common.css` type="text/css")
     block css
   body
     include ../_includes/header.pug
@@ -21,6 +21,7 @@ html(lang="ko")
     include ../_includes/nudge.pug
 
 block script
-  script(type="module", src="/src/js/libs/jquery.js")
-  script(type="module", src="/src/js/common.ui.js")
+  script(src=`${path}/src/js/libs/jquery.js`)
+  script(src=`${path}/src/js/libs/swiper.min.5.4.5.js`)
+  script(type="module", src=`${path}/src/js/common.ui.js`)
     

@@ -6,7 +6,7 @@ block variables
   - var title = '메인 페이지'
 
 block css
-  link(rel="stylesheet", href="/src/css/main.css")
+  link(rel="stylesheet", href=`${path}/src/css/main.css`)
 
 block content  
   main#main(role="main")
@@ -29,3 +29,43 @@ block content
               strong.font-style-18 관심 등록
               span.font-style-16 오픈/할인 소식 알림은
       .contents-inner
+        section.section.section-01
+          .section-inner
+            h2.title-h2
+              | 패스트파이브는
+              br
+              | 대한민국 1등
+              br
+              | 공유오피스입니다.
+            .contents-area
+              .swiper-container.ui-swiper
+                .swiper-wrapper
+                  .swiper-slide.slide-01
+                    .text-area
+                      p.txt01.font-style-18 국내 최대 지점 보유
+                      strong.txt02 41
+                        i.icon +
+                  .swiper-slide.slide-02
+                    .text-area
+                      p.txt01.font-style-18 누적 이용 회사 수
+                      strong.txt02 16,870
+                        i.icon +
+                    .obj-area
+                      ul.symbol-box-01
+                        li.symbol01(aria-hidden="true")
+                        li.symbol02(aria-hidden="true")
+                        li.symbol03(aria-hidden="true")
+                      ul.symbol-box-02
+                        li.symbol04(aria-hidden="true")
+                        li.symbol05(aria-hidden="true")
+                        li.symbol06(aria-hidden="true")
+                  .swiper-slide.slide-03
+                    .text-area
+                      p.txt01.font-style-18 재계약 의사
+                      strong.txt02 86
+                        i.icon %
+                  .swiper-slide.slide-04
+                    .text-area
+                      p.txt01.font-style-18 지인추천 의향
+                      strong.txt02 92
+                        i.icon %

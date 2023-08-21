@@ -1,5 +1,4 @@
 main {
-  height: 100rem;
 }
 
 .snb-area {
@@ -28,7 +27,7 @@ main {
     }
 
     .font-style-16 {
-      margin-top: -.4rem;
+      margin-top: -0.4rem;
       color: #777777;
     }
 
@@ -51,6 +50,174 @@ main {
 
     &:first-child::before {
       display: none;
+    }
+  }
+}
+
+.section {
+  .section-inner {
+    max-width: 128rem;
+    margin: 0 auto;
+  }
+
+  &.section-01 {
+    .section-inner {
+      display: flex;
+    }
+
+    .title-h2 {
+      display: flex;
+      margin-right: 15.5rem;
+    }
+
+    .contents-area {
+      display: flex;
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        max-width: 85rem;
+        height: 43rem;
+        background: linear-gradient(
+          270deg,
+          #fff 1.24%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        z-index: 1;
+      }
+
+      .swiper-container {
+      }
+
+      .swiper-wrapper {
+        transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        .swiper-slide {
+          position: relative;
+          width: 30.2rem;
+          height: 43rem;
+          padding-top: 5rem;
+          border-radius: 1.6rem;
+          background-color: #f1f4f8;
+          box-shadow: 1.6rem 2rem 6rem 0px rgba(0, 0, 0, 0.05);
+
+          .text-area {
+            margin-left: 3.6rem;
+
+            .txt02 {
+              font-size: 5.2rem;
+              font-weight: 700;
+              color: #222222;
+              line-height: 1.4;
+              letter-spacing: -1px;
+
+              .icon {
+                margin-left: 0.5rem;
+                font-style: normal;
+                font-size: 4.6rem;
+                font-weight: 400;
+              }
+            }
+          }
+
+          &.slide-01 {
+            // width: 100%;
+            // height: 100%;
+            background: #f1f4f8 url(`${path}/src/images/img_section01_slide_bg01.png`)
+              no-repeat right bottom;
+            background-size: 26.3rem 23.6rem;
+          }
+
+          &.slide-02 {
+            overflow: hidden;
+
+            .obj-area {
+              ul {
+                position: absolute;
+                display: flex;
+
+                &.symbol-box-01 {
+                  left: 3rem;
+                  bottom: 11.9rem;
+                }
+
+                &.symbol-box-02 {
+                  bottom: 2.5rem;
+                  left: -2rem;
+                }
+
+                li {
+                  display: inline-flex;
+                  width: 7.8rem;
+                  height: 7.8rem;
+
+                  &.symbol01 {
+                    background: url(`${path}/src/images/img_section01_slide_symbol01.png`)
+                      no-repeat 0 0;
+                    background-size: cover;
+                  }
+                  &.symbol02 {
+                    background: url(`${path}/src/images/img_section01_slide_symbol02.png`)
+                      no-repeat 0 0;
+                    background-size: cover;
+                  }
+                  &.symbol03 {
+                    background: url(`${path}/src/images/img_section01_slide_symbol03.png`)
+                      no-repeat 0 0;
+                    background-size: cover;
+                  }
+                  &.symbol04 {
+                    background: url(`${path}/src/images/img_section01_slide_symbol04.png`)
+                      no-repeat 0 0;
+                    background-size: cover;
+                  }
+                  &.symbol05 {
+                    background: url(`${path}/src/images/img_section01_slide_symbol05.png`)
+                      no-repeat 0 0;
+                    background-size: cover;
+                  }
+                  &.symbol06 {
+                    background: url(`${path}/src/images/img_section01_slide_symbol06.png`)
+                      no-repeat 0 0;
+                    background-size: cover;
+                  }
+
+                  & + li {
+                    margin-left: 2.4rem;
+                  }
+                }
+              }
+            }
+          }
+
+          &.slide-03 {
+            .text-area {
+              .icon {
+                font-size: 2.4rem;
+                font-weight: 700;
+              }
+            }
+            background: #f1f4f8 url(`${path}/src/images/img_section01_slide_bg03.png`)
+              no-repeat 14.3rem bottom;
+            background-size: 12.4rem 24.7rem;
+          }
+
+          &.slide-04 {
+            .text-area {
+              .icon {
+                font-size: 2.4rem;
+                font-weight: 700;
+              }
+            }
+
+            background: #f1f4f8 url(`${path}/src/images/img_section01_slide_bg04.png`)
+              no-repeat 6.5rem bottom;
+            background-size: 20.2rem 26.3rem;
+          }
+        }
+      }
     }
   }
 }

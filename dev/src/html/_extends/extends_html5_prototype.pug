@@ -5,10 +5,10 @@ html(lang="ko")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
     title #{title}
-    link(rel="stylesheet", href="/src/css/reset.css" type="text/css")
-    link(rel="stylesheet", href="/src/css/codinglist.css" type="text/css")
-    link(rel="stylesheet", href="/src/css/prototype.css" type="text/css")
-    link(rel="stylesheet", href="/src/css/common.css" type="text/css")
+    link(rel="stylesheet", href=`${path}/src/css/reset.css` type="text/css")
+    link(rel="stylesheet", href=`${path}/src/css/codinglist.css` type="text/css")
+    link(rel="stylesheet", href=`${path}/src/css/prototype.css` type="text/css")
+    link(rel="stylesheet", href=`${path}/src/css/common.css` type="text/css")
     block css
   body
 
@@ -16,5 +16,5 @@ html(lang="ko")
       block content
     
 block script
-  script(type="module", src="/src/js/libs/jquery.js")
-  script(type="module", src="/src/js/common.ui.js") 
+  script(src=`${path}/src/js/libs/jquery.js`)
+  script(type="module", src=`${path}/src/js/common.ui.js`) 

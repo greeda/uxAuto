@@ -11,6 +11,9 @@ var projectRoot = path.resolve(__dirname, "dev");
 var uglify = require("gulp-uglify");
 var babel = require("gulp-babel");
 
+const isProduction = process.env.NODE_ENV ==='production';
+const $path = isProduction ? '/wp-content/themes/fastfive-new' : '';
+
 var paths = {
   styles: {
     src: "dev/src/css/**/*.scss",
@@ -84,6 +87,9 @@ gulp.task("views", function buildHTML() {
     .pipe(
       pug({
         pretty: true,
+        locals: {
+          path: $path
+        }
       })
     )
     .pipe(gulp.dest("./dist/src/html"));
@@ -138,5 +144,17 @@ gulp.task(
     "copy:js",
     "views",
     "serve"
+  )
+);
+
+gulp.task(
+  "build",
+  gulp.series(
+    "sass",
+    "html",
+    "copy:images",
+    "copy:fonts",
+    "copy:js",
+    "views"
   )
 );

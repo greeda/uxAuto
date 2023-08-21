@@ -247,6 +247,12 @@ pre {
   border-radius: 0.2rem;
 }
 
+.section {
+  display: flex;
+  width: 100%;
+  padding: 18rem 0;
+}
+
 @media (max-width: 1023px) {
   body {
     background-color: beige;
