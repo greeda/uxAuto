@@ -1,15 +1,22 @@
 # uxAuto
-- 뉴패파 리뉴얼
-
+> 뉴패파 리뉴얼
 
 # settings
-- npm i -g gulp gulp-cli
-- npm install
+* npm i -g gulp gulp-cli
+* npm install
 
 
 # start
-- gulp
+* gulp
+
+## build
+* npm run build
+  * gulpfile.js 
+    * $path 변수에 실서버 경로 할당
 
 # production
-- npm run build
-- gulpfile.js 에서 $path 경로를 실서버 경로와 맞게 수정해야 함.
+* scss의 url 작성 방법
+  * url(#{path}/src/images/...)
+* Pug includes
+  * include ../_includes/nudge.pug
+* _filename.scss 는 빌드 시 따로 생성되지 않는다.
