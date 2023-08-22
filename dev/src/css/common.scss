@@ -5,6 +5,9 @@
 @import 'prototype';
 @import '_swiper.5.4.5';
 
+$path: getPath();
+
+
 .skipnav {
   position: absolute;
   top: -4rem;
@@ -256,7 +259,7 @@
             content: "";
             width: 1.6rem;
             height: 1.6rem;
-            background: url(`${path}/src/images/icons/ico_footer_arr.png`) no-repeat 0 0;
+            background: url(#{$path}/src/images/icons/ico_footer_arr.png) no-repeat 0 0;
             background-size: cover;
             transform: rotate(180deg);
           }
@@ -357,27 +360,27 @@
           height: 100%;
 
           &.ico-facebook {
-            background: url(`${path}/src/images/icons/ico_footer_facebook.png`) no-repeat 0 0;
+            background: url(#{$path}/src/images/icons/ico_footer_facebook.png) no-repeat 0 0;
             background-size: cover;
           }
 
           &.ico-instagram {
-            background: url(`${path}/src/images/icons/ico_footer_instagram.png`) no-repeat 0 0;
+            background: url(#{$path}/src/images/icons/ico_footer_instagram.png) no-repeat 0 0;
             background-size: cover;
           }
 
           &.ico-youtube {
-            background: url(`${path}/src/images/icons/ico_footer_youtube.png`) no-repeat 0 0;
+            background: url(#{$path}/src/images/icons/ico_footer_youtube.png) no-repeat 0 0;
             background-size: cover;
           }
 
           &.ico-naver {
-            background: url(`${path}/src/images/icons/ico_footer_naver.png`) no-repeat 0 0;
+            background: url(#{$path}/src/images/icons/ico_footer_naver.png) no-repeat 0 0;
             background-size: cover;
           }
 
           &.ico-brunch {
-            background: url(`${path}/src/images/icons/ico_footer_brunch.png`) no-repeat 0 0;
+            background: url(#{$path}/src/images/icons/ico_footer_brunch.png) no-repeat 0 0;
             background-size: cover;
           }
         }
@@ -440,7 +443,7 @@
         &:nth-of-type(1) {
           a {
             &::before {
-              background: url(`${path}/src/images/icons/ico_quick_01.png`) no-repeat 0 0;
+              background: url(#{$path}/src/images/icons/ico_quick_01.png) no-repeat 0 0;
               background-size: contain;
             }
           }
@@ -461,7 +464,7 @@
 
           a {
             &::before {
-              background: url(`${path}/src/images/icons/ico_quick_02.png`) no-repeat 0 0;
+              background: url(#{$path}/src/images/icons/ico_quick_02.png) no-repeat 0 0;
               background-size: contain;
             }
           }
@@ -482,7 +485,7 @@
 
           a {
             &::before {
-              background: url(`${path}/src/images/icons/ico_quick_03.png`) no-repeat 0 0;
+              background: url(#{$path}/src/images/icons/ico_quick_03.png) no-repeat 0 0;
               background-size: contain;
             }
           }
@@ -516,7 +519,7 @@
           content: "";
           width: 2.4rem;
           height: 2.4rem;
-          background: url(`${path}/src/images/icons/ico_arr_gray.png`) no-repeat 0 0;
+          background: url(#{$path}/src/images/icons/ico_arr_gray.png) no-repeat 0 0;
           background-size: contain;
         }
       }

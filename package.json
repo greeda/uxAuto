@@ -13,7 +13,7 @@
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.64.0"
+    "sass": "^1.66.1"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",

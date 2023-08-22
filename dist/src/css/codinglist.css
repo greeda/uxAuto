@@ -33,6 +33,10 @@
 .cl-table tr:hover {
   background-color: lightgray;
 }
+.cl-table td.link {
+  text-decoration: underline;
+  color: blue;
+}
 .cl-table tr th,
 .cl-table tr td {
   padding: 0.5rem 1rem;

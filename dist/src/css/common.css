@@ -11,55 +11,55 @@ http://scripts.sil.org/OFL
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard Black"), url("/src/font/woff2/Pretendard-Black.woff2") format("woff2"), url("/src/font/woff/Pretendard-Black.woff") format("woff");
+  src: local("Pretendard Black"), url(/src/font/woff2/Pretendard-Black.woff2) format("woff2"), url(/src/font/woff/Pretendard-Black.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url("/src/font/woff2/Pretendard-ExtraBold.woff2") format("woff2"), url("/src/font/woff/Pretendard-ExtraBold.woff") format("woff");
+  src: local("Pretendard ExtraBold"), url(/src/font/woff2/Pretendard-ExtraBold.woff2) format("woff2"), url(/src/font/woff/Pretendard-ExtraBold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("/src/font/woff2/Pretendard-Bold.woff2") format("woff2"), url("/src/font/woff/Pretendard-Bold.woff") format("woff");
+  src: local("Pretendard Bold"), url(/src/font/woff2/Pretendard-Bold.woff2) format("woff2"), url(/src/font/woff/Pretendard-Bold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("/src/font/woff2/Pretendard-SemiBold.woff2") format("woff2"), url("/src/font/woff/Pretendard-SemiBold.woff") format("woff");
+  src: local("Pretendard SemiBold"), url(/src/font/woff2/Pretendard-SemiBold.woff2) format("woff2"), url(/src/font/woff/Pretendard-SemiBold.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/src/font/woff2/Pretendard-Medium.woff2") format("woff2"), url("/src/font/woff/Pretendard-Medium.woff") format("woff");
+  src: local("Pretendard Medium"), url(/src/font/woff2/Pretendard-Medium.woff2) format("woff2"), url(/src/font/woff/Pretendard-Medium.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("/src/font/woff2/Pretendard-Regular.woff2") format("woff2"), url("/src/font/woff/Pretendard-Regular.woff") format("woff");
+  src: local("Pretendard Regular"), url(/src/font/woff2/Pretendard-Regular.woff2) format("woff2"), url(/src/font/woff/Pretendard-Regular.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("/src/font/woff2/Pretendard-Light.woff2") format("woff2"), url("/src/font/woff/Pretendard-Light.woff") format("woff");
+  src: local("Pretendard Light"), url(/src/font/woff2/Pretendard-Light.woff2) format("woff2"), url(/src/font/woff/Pretendard-Light.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url("/src/font/woff2/Pretendard-ExtraLight.woff2") format("woff2"), url("/src/font/woff/Pretendard-ExtraLight.woff") format("woff");
+  src: local("Pretendard ExtraLight"), url(/src/font/woff2/Pretendard-ExtraLight.woff2) format("woff2"), url(/src/font/woff/Pretendard-ExtraLight.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("/src/font/woff2/Pretendard-Thin.woff2") format("woff2"), url("/src/font/woff/Pretendard-Thin.woff") format("woff");
+  src: local("Pretendard Thin"), url(/src/font/woff2/Pretendard-Thin.woff2) format("woff2"), url(/src/font/woff/Pretendard-Thin.woff) format("woff");
 }
 /*! reset */
 *,
@@ -1445,7 +1445,7 @@ button.swiper-pagination-bullet {
   content: "";
   width: 1.6rem;
   height: 1.6rem;
-  background: url("/src/images/icons/ico_footer_arr.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_footer_arr.png) no-repeat 0 0;
   background-size: cover;
   transform: rotate(180deg);
 }
@@ -1527,23 +1527,23 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 #footer .footer-inner .social-area li a.ico-facebook {
-  background: url("/src/images/icons/ico_footer_facebook.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_footer_facebook.png) no-repeat 0 0;
   background-size: cover;
 }
 #footer .footer-inner .social-area li a.ico-instagram {
-  background: url("/src/images/icons/ico_footer_instagram.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_footer_instagram.png) no-repeat 0 0;
   background-size: cover;
 }
 #footer .footer-inner .social-area li a.ico-youtube {
-  background: url("/src/images/icons/ico_footer_youtube.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_footer_youtube.png) no-repeat 0 0;
   background-size: cover;
 }
 #footer .footer-inner .social-area li a.ico-naver {
-  background: url("/src/images/icons/ico_footer_naver.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_footer_naver.png) no-repeat 0 0;
   background-size: cover;
 }
 #footer .footer-inner .social-area li a.ico-brunch {
-  background: url("/src/images/icons/ico_footer_brunch.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_footer_brunch.png) no-repeat 0 0;
   background-size: cover;
 }
 
@@ -1593,7 +1593,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 0.6rem;
 }
 .quick-menu .aside-inner .aside-menu .menu-list:nth-of-type(1) a::before {
-  background: url("/src/images/icons/ico_quick_01.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_quick_01.png) no-repeat 0 0;
   background-size: contain;
 }
 .quick-menu .aside-inner .aside-menu .menu-list:nth-of-type(2)::before {
@@ -1608,7 +1608,7 @@ button.swiper-pagination-bullet {
   transform: translateX(-50%);
 }
 .quick-menu .aside-inner .aside-menu .menu-list:nth-of-type(2) a::before {
-  background: url("/src/images/icons/ico_quick_02.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_quick_02.png) no-repeat 0 0;
   background-size: contain;
 }
 .quick-menu .aside-inner .aside-menu .menu-list:nth-of-type(3)::before {
@@ -1623,7 +1623,7 @@ button.swiper-pagination-bullet {
   transform: translateX(-50%);
 }
 .quick-menu .aside-inner .aside-menu .menu-list:nth-of-type(3) a::before {
-  background: url("/src/images/icons/ico_quick_03.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_quick_03.png) no-repeat 0 0;
   background-size: contain;
 }
 .quick-menu .aside-inner .btn-area {
@@ -1652,7 +1652,7 @@ button.swiper-pagination-bullet {
   content: "";
   width: 2.4rem;
   height: 2.4rem;
-  background: url("/src/images/icons/ico_arr_gray.png") no-repeat 0 0;
+  background: url(/src/images/icons/ico_arr_gray.png) no-repeat 0 0;
   background-size: contain;
 }
 

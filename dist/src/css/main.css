@@ -57,6 +57,7 @@
 }
 .section.section-01 .contents-area {
   display: flex;
+  border-radius: 1.6rem;
   overflow: hidden;
 }
 .section.section-01 .contents-area::after {
@@ -97,7 +98,7 @@
   font-weight: 400;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-01 {
-  background: #f1f4f8 url("/src/images/img_section01_slide_bg01.png") no-repeat right bottom;
+  background: #f1f4f8 url(/src/images/img_section01_slide_bg01.png) no-repeat right bottom;
   background-size: 26.3rem 23.6rem;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 {
@@ -121,34 +122,34 @@
   height: 7.8rem;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li.symbol01 {
-  background: url("/src/images/img_section01_slide_symbol01.png") no-repeat 0 0;
+  background: url(/src/images/img_section01_slide_symbol01.png) no-repeat 0 0;
   background-size: cover;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li.symbol02 {
-  background: url("/src/images/img_section01_slide_symbol02.png") no-repeat 0 0;
+  background: url(/src/images/img_section01_slide_symbol02.png) no-repeat 0 0;
   background-size: cover;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li.symbol03 {
-  background: url("/src/images/img_section01_slide_symbol03.png") no-repeat 0 0;
+  background: url(/src/images/img_section01_slide_symbol03.png) no-repeat 0 0;
   background-size: cover;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li.symbol04 {
-  background: url("/src/images/img_section01_slide_symbol04.png") no-repeat 0 0;
+  background: url(/src/images/img_section01_slide_symbol04.png) no-repeat 0 0;
   background-size: cover;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li.symbol05 {
-  background: url("/src/images/img_section01_slide_symbol05.png") no-repeat 0 0;
+  background: url(/src/images/img_section01_slide_symbol05.png) no-repeat 0 0;
   background-size: cover;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li.symbol06 {
-  background: url("/src/images/img_section01_slide_symbol06.png") no-repeat 0 0;
+  background: url(/src/images/img_section01_slide_symbol06.png) no-repeat 0 0;
   background-size: cover;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-02 .obj-area ul li + li {
   margin-left: 2.4rem;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-03 {
-  background: #f1f4f8 url("/src/images/img_section01_slide_bg03.png") no-repeat 14.3rem bottom;
+  background: #f1f4f8 url(/src/images/img_section01_slide_bg03.png) no-repeat 14.3rem bottom;
   background-size: 12.4rem 24.7rem;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-03 .text-area .icon {
@@ -156,10 +157,13 @@
   font-weight: 700;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-04 {
-  background: #f1f4f8 url("/src/images/img_section01_slide_bg04.png") no-repeat 6.5rem bottom;
+  background: #f1f4f8 url(/src/images/img_section01_slide_bg04.png) no-repeat 6.5rem bottom;
   background-size: 20.2rem 26.3rem;
 }
 .section.section-01 .contents-area .swiper-wrapper .swiper-slide.slide-04 .text-area .icon {
   font-size: 2.4rem;
   font-weight: 700;
+}
+.section.section-02 {
+  background-color: #f1f4f8;
 }

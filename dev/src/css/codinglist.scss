@@ -41,12 +41,18 @@
     }
   }
 
+  td {
+    &.link {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+
   tr th,
   tr td {
     padding: .5rem 1rem;
     border-bottom: 1px solid #000000;
     border-right: 1px solid #000000;
-    // line-height: 100%;
 
     &:last-child {
       border-right: none;

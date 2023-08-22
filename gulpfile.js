@@ -1,6 +1,8 @@
 var gulp = require("gulp");
+const gulpSass = require("gulp-sass");
+const sassCompiler = require("sass");
+const sass = gulpSass(sassCompiler);
 var pug = require("gulp-pug");
-const sass = require("gulp-sass")(require("sass"));
 var fileinclude = require("gulp-file-include");
 var browserSync = require("browser-sync").create();
 const fs = require("fs");
@@ -11,8 +13,8 @@ var projectRoot = path.resolve(__dirname, "dev");
 var uglify = require("gulp-uglify");
 var babel = require("gulp-babel");
 
-const isProduction = process.env.NODE_ENV ==='production';
-const $path = isProduction ? '/wp-content/themes/fastfive-new' : '';
+const isProduction = process.env.NODE_ENV === "production";
+const $path = isProduction ? "/wp-content/themes/fastfive-new" : "";
 
 var paths = {
   styles: {
@@ -28,11 +30,19 @@ var paths = {
     dest: "dist/src/images",
   },
 };
-
 gulp.task("sass", function () {
   return gulp
     .src("dev/src/css/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
+    .pipe(
+      sass({
+        includePaths: ["./node_modules"],
+        functions: {
+          "getPath()": function () {
+            return new sassCompiler.types.String($path);
+          },
+        },
+      })
+    )
     .pipe(gulp.dest("dist/src/css"));
 });
 
@@ -88,8 +98,8 @@ gulp.task("views", function buildHTML() {
       pug({
         pretty: true,
         locals: {
-          path: $path
-        }
+          path: $path,
+        },
       })
     )
     .pipe(gulp.dest("./dist/src/html"));
@@ -149,12 +159,5 @@ gulp.task(
 
 gulp.task(
   "build",
-  gulp.series(
-    "sass",
-    "html",
-    "copy:images",
-    "copy:fonts",
-    "copy:js",
-    "views"
-  )
+  gulp.series("sass", "html", "copy:images", "copy:fonts", "copy:js", "views")
 );
