@@ -8,6 +8,7 @@ class UISwiper extends UI {
   constructor(el, options) {
     super("UISwiper", el);
 
+    
     this.init(el, options);
   }
 
@@ -34,6 +35,7 @@ class UISwiper extends UI {
     };
 
     this.swiper = new Swiper(this.el, options);
+
   }
 
   detachEvents() {}

@@ -1,4 +1,4 @@
-import commonUiList from '/src/js/common.ui.list.js';
+import commonUiList from "/src/js/common.ui.list.js";
 
 export function clTabsHandler() {
   const tabList = document.querySelectorAll(".prototype-list li");
