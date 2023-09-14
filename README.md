@@ -1,5 +1,5 @@
 # uxAuto
-> 뉴패파 리뉴얼
+> 퍼블리싱 기본 세팅
 
 # settings
 * npm i -g gulp gulp-cli
