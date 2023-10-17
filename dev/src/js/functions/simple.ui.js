@@ -1,5 +1,7 @@
 import commonUiList from "/src/js/common.ui.list.js";
 
+export const UiMap = new WeakMap();
+
 export function clTabsHandler() {
   const tabList = document.querySelectorAll(".prototype-list li");
   let activeList = document.querySelector(".prototype-list li.active");
@@ -41,21 +43,18 @@ export function familySiteSelectHandler() {
 
 export function refreshUI(force = false) {
   commonUiList.forEach((ui) => {
-    $(ui.className)
-      .toArray()
-      .forEach((el) => {
-        if (force || !$(el).data("ui")) {
-          if ($(el).hasClass("ui-alert")) {
-            return;
-          }
-          if (!!$(el).data("ui")) {
-            $(el).data("ui").detachEvents();
-          }
-          const Class = ui.classObject;
-          const options = { ...$(el).data() };
-          const uiInstance = new Class(el, options);
-          $(el).data("ui", uiInstance);
+    let elements = document.querySelectorAll(ui.className);
+
+    elements.forEach((el) => {
+      if (force || !el.dataset.ui) {
+        if (!el.dataset.ui) {
         }
-      });
+        const Class = ui.classObject;
+        const options = {...el.dataset};
+        console.log(options);
+        const uiInstance = new Class(el, options);
+        UiMap.set(el, uiInstance);
+      }
+    });
   });
 }

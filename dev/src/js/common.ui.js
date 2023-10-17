@@ -2,7 +2,8 @@
 import {
   refreshUI,
   clTabsHandler,
-  familySiteSelectHandler
+  familySiteSelectHandler,
+  UiMap
 } from './functions/simple.ui.js';
 
 let frontUI = {
@@ -10,6 +11,7 @@ let frontUI = {
 };
 
 window.frontUI = frontUI;
+window.frontAPI = UiMap;
 
 
 function init() {
