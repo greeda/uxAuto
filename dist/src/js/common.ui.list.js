@@ -1,4 +1,4 @@
-import UISwiper from '/src/js/components/UISwiper.js';
+import { UISwiper } from './components/index.js';
 
 const commonUiList = [
   {

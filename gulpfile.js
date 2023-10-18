@@ -138,7 +138,7 @@ gulp.task("serve", function () {
   browserSync.init({
     server: {
       baseDir: ["./dist", "./dev"],
-      index: "src/html/cl.html",
+      index: "src/html/index.html",
     },
     port: 8888,
   });

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "dev/src/js/common.ui.list.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697588383417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697588824512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { UISwiper } from './components';\n+import { UISwiper } from './components/index.js';\n \n const commonUiList = [\n   {\n     className: '.ui-swiper',\n"
+                }
+            ],
+            "date": 1697588383417,
+            "name": "Commit-0",
+            "content": "import { UISwiper } from './components';\n\nconst commonUiList = [\n  {\n    className: '.ui-swiper',\n    classObject: UISwiper\n  },\n]\n\nexport default commonUiList;"
+        }
+    ]
+}

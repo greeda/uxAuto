@@ -7,7 +7,7 @@ import {
 } from './functions/simple.ui.js';
 
 let frontUI = {
-
+  refreshUI,
 };
 
 window.frontUI = frontUI;

@@ -1,0 +1,82 @@
+{
+    "sourceFile": "dev/src/html/index.pug",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1697590870295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697590882529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,4 @@\n           // pages\n           include ./_extends/cl_pages.pug\n block script\n   script.\n-    const tdNumber = document.querySelectorAll('td.no');\n-\n-    tdNumber.forEach((tdList, index) => {\n-      tdList.innerText = index + 1;\n-    });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697590941408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,25 +3,13 @@\n block variables\n   - var title = 'index'\n \n block content \n+  header#header\n+    nav.nav-header\n+      ul.nav-list \n+        li\n+          a(href=\"#\") aa \n   main#main.cl-main\n-      header.cl-header\n-        h1 프로젝트 코딩리스트\n-      .prototype-menu\n-        ul\n-          li.active\n-            a(href=`${path}/src/html/cl.html`) 페이지 리스트\n-          li\n-            a(href=`${path}/src/html/_prototype/prototype_list.html`) 프로토타입\n-          li\n-            a(href=`${path}/src/html/_prototype/prototype_layout.html`) 레이아웃\n-          li\n-            a(href=`${path}/src/html/_prototype/prototype_form.html`) 폼 양식\n-          li\n-            a(href=`${path}/src/html/_prototype/prototype_components_list.html`) 컴포넌트\n-      .table-container\n-        .table-scroll-inner\n-          // pages\n-          include ./_extends/cl_pages.pug\n+\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697590951420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,7 @@\n     nav.nav-header\n       ul.nav-list \n         li\n           a(href=\"#\") aa \n-  main#main.cl-main\n-\n+  main#main.cl-main contents\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697591417920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n   header#header\n     nav.nav-header\n       ul.nav-list \n         li\n-          a(href=\"#\") aa \n+          a(href=\"#\") documentation \n+        li\n+          a(href=\"#\")  \n   main#main.cl-main contents\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697591491229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,11 @@\n       ul.nav-list \n         li\n           a(href=\"#\") documentation \n         li\n-          a(href=\"#\")  \n+          a(href=\"#\") blog \n+        li\n+          a(href=\"#\") github\n+          \n   main#main.cl-main contents\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697592499597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n         li\n           a(href=\"#\") blog \n         li\n           a(href=\"#\") github\n-          \n-  main#main.cl-main contents\n+\n+  main#main.index-main contents\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697601023915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   header#header\n     nav.nav-header\n       ul.nav-list \n         li\n-          a(href=\"#\") documentation \n+          a(href=\"#\") documentation\n         li\n           a(href=\"#\") blog \n         li\n           a(href=\"#\") github\n"
+                },
+                {
+                    "date": 1697601042611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,7 @@\n         li\n           a(href=\"#\") github\n \n   main#main.index-main contents\n+    ㅁㄴ\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697601092926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,10 @@\n         li\n           a(href=\"#\") github\n \n   main#main.index-main contents\n-    ㅁㄴ\n+    aside.c-aside\n+      ul.c-list\n+        li\n+          a(href=\"#\") \n block script\n   script.\n"
+                },
+                {
+                    "date": 1697601104497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n   main#main.index-main contents\n     aside.c-aside\n       ul.c-list\n         li\n-          a(href=\"#\") \n+          a(href=\"#\") Accordion \n block script\n   script.\n"
+                },
+                {
+                    "date": 1697601110842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           a(href=\"#\") blog \n         li\n           a(href=\"#\") github\n \n-  main#main.index-main contents\n+  main#main.index-main\n     aside.c-aside\n       ul.c-list\n         li\n           a(href=\"#\") Accordion \n"
+                },
+                {
+                    "date": 1697601134742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,9 @@\n     aside.c-aside\n       ul.c-list\n         li\n           a(href=\"#\") Accordion \n+    #container\n+      .container-inner\n+      \n block script\n   script.\n"
+                },
+                {
+                    "date": 1697601629849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,24 +3,14 @@\n block variables\n   - var title = 'index'\n \n block content \n-  header#header\n-    nav.nav-header\n-      ul.nav-list \n-        li\n-          a(href=\"#\") documentation\n-        li\n-          a(href=\"#\") blog \n-        li\n-          a(href=\"#\") github\n-\n   main#main.index-main\n     aside.c-aside\n       ul.c-list\n         li\n           a(href=\"#\") Accordion \n     #container\n       .container-inner\n-      \n+\n block script\n   script.\n"
+                },
+                {
+                    "date": 1697601671828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-extends ./_extends/extends_html5_prototype.pug\n+extends ../_extends/extends_html5_prototype.pug\n \n block variables\n   - var title = 'index'\n \n"
+                },
+                {
+                    "date": 1697601689474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-extends ../_extends/extends_html5_prototype.pug\n+extends ./_extends/extends_html5_prototype.pug\n \n block variables\n   - var title = 'index'\n \n"
+                },
+                {
+                    "date": 1697601695087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-extends ./_extends/extends_html5_prototype.pug\n+extends ./_extends/extends_html5.pug\n \n block variables\n   - var title = 'index'\n \n"
+                }
+            ],
+            "date": 1697590870295,
+            "name": "Commit-0",
+            "content": "extends ./_extends/extends_html5_prototype.pug\n\nblock variables\n  - var title = 'index'\n\nblock content \n  main#main.cl-main\n      header.cl-header\n        h1 프로젝트 코딩리스트\n      .prototype-menu\n        ul\n          li.active\n            a(href=`${path}/src/html/cl.html`) 페이지 리스트\n          li\n            a(href=`${path}/src/html/_prototype/prototype_list.html`) 프로토타입\n          li\n            a(href=`${path}/src/html/_prototype/prototype_layout.html`) 레이아웃\n          li\n            a(href=`${path}/src/html/_prototype/prototype_form.html`) 폼 양식\n          li\n            a(href=`${path}/src/html/_prototype/prototype_components_list.html`) 컴포넌트\n      .table-container\n        .table-scroll-inner\n          // pages\n          include ./_extends/cl_pages.pug\nblock script\n  script.\n    const tdNumber = document.querySelectorAll('td.no');\n\n    tdNumber.forEach((tdList, index) => {\n      tdList.innerText = index + 1;\n    });"
+        }
+    ]
+}
