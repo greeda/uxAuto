@@ -5,12 +5,44 @@ block variables
 
 block content 
   main#main.index-main
-    aside.c-aside
-      ul.c-list
+    aside.component-aisde
+      ul.component-list
         li
-          a(href="#") Accordion 
+          a(href="#") Popup
+        li
+          a(href="#") Accordion
     #container
       .container-inner
+        section.component-box
+          .component-guide
+            h3.title-h3 Popup 
+            .text-area
+              p.txt 설명1
+              p.txt 설명2
+              p.txt 설명3
+          .component-info
+            .ui-accordion-info.ui-accordion
+              .accordion-title-info
+                strong Popup
+                i.ico(aria-hidden="true")
+              .accordion-contents-info
+                .accordion-contents-inner
+                  p.txt 내용...123
+        section.component-box
+          .component-guide
+            h3.title-h3 Accoridon 
+            .text-area
+              p.txt 설명1
+              p.txt 설명2
+              p.txt 설명3
+          .component-info
+            .ui-accordion-info.ui-accordion
+              .accordion-title-info
+                strong 아코디언1
+                i.ico(aria-hidden="true")
+              .accordion-contents-info
+                .accordion-contents-inner
+                  p.txt 내용...123
 
 block script
   script.

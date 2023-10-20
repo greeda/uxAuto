@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1697590870295,
@@ -72,6 +72,30 @@
                 {
                     "date": 1697601695087,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-extends ./_extends/extends_html5_prototype.pug\n+extends ./_extends/extends_html5.pug\n \n block variables\n   - var title = 'index'\n \n"
+                },
+                {
+                    "date": 1697677414795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,14 @@\n   - var title = 'index'\n \n block content \n   main#main.index-main\n-    aside.c-aside\n-      ul.c-list\n+    aside.component-aisde\n+      ul.component-list\n         li\n-          a(href=\"#\") Accordion \n+          a(href=\"#\") Popup\n+        li\n+          a(href=\"#\") Accordion\n     #container\n       .container-inner\n \n block script\n"
+                },
+                {
+                    "date": 1697694828465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,14 @@\n         li\n           a(href=\"#\") Accordion\n     #container\n       .container-inner\n+        section.component-box\n+          .component-guide\n+            h3.title-h3 Acooridon \n+            .text-area\n+              p.txt 설명1\n+              p.txt 설명2\n+              p.txt 설명3\n \n block script\n   script.\n"
+                },
+                {
+                    "date": 1697694942984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,15 @@\n             .text-area\n               p.txt 설명1\n               p.txt 설명2\n               p.txt 설명3\n+          .component-info\n+            .ui-accordion-info.ui-accordion\n+              .accordion-title-info\n+                strong 아코디언1\n+                i.ico(aria-hidden=\"true\")\n+              .accordion-contents-info\n+                .accordion-contents-inner\n+                  p.txt 내용...123\n \n block script\n   script.\n"
+                },
+                {
+                    "date": 1697697516584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     #container\n       .container-inner\n         section.component-box\n           .component-guide\n-            h3.title-h3 Acooridon \n+            h3.title-h3 Accoridon \n             .text-area\n               p.txt 설명1\n               p.txt 설명2\n               p.txt 설명3\n"
+                },
+                {
+                    "date": 1697703904508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,23 @@\n     #container\n       .container-inner\n         section.component-box\n           .component-guide\n+            h3.title-h3 Popup \n+            .text-area\n+              p.txt 설명1\n+              p.txt 설명2\n+              p.txt 설명3\n+          .component-info\n+            .ui-accordion-info.ui-accordion\n+              .accordion-title-info\n+                strong 아코디언1\n+                i.ico(aria-hidden=\"true\")\n+              .accordion-contents-info\n+                .accordion-contents-inner\n+                  p.txt 내용...123\n+        section.component-box\n+          .component-guide\n             h3.title-h3 Accoridon \n             .text-area\n               p.txt 설명1\n               p.txt 설명2\n"
+                },
+                {
+                    "date": 1697703909799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n               p.txt 설명3\n           .component-info\n             .ui-accordion-info.ui-accordion\n               .accordion-title-info\n-                strong 아코디언1\n+                strong Popup\n                 i.ico(aria-hidden=\"true\")\n               .accordion-contents-info\n                 .accordion-contents-inner\n                   p.txt 내용...123\n"
                 }
             ],
             "date": 1697590870295,

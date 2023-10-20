@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dev/src/html/_extends/extends_html5.pug",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697677447552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697677447552,
+            "name": "Commit-0",
+            "content": "doctype html\nhtml(lang=\"ko\")\n  head\n    block variables\n    meta(charset=\"UTF-8\")\n    meta(name=\"viewport\", content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\")\n    meta(property=\"og:title\", content=ogTitle || \"\")\n    meta(property=\"og:description\", content=ogDescription || \"\")\n    title #{title}\n    link(rel=\"stylesheet\", href=`${path}/src/css/common.css` type=\"text/css\")\n    block css\n  body\n    include ../_includes/header.pug\n\n    div#container\n      a.skipnav(href=\"#main\") 주요 콘텐츠로 건너뛰기\n      block content\n    \n    //- include ../_includes/footer.pug\n    \n    include ../_includes/nudge.pug\n\nblock script\n  script(src=`${path}/src/js/libs/jquery.js`)\n  script(src=`${path}/src/js/libs/swiper.min.5.4.5.js`)\n  script(type=\"module\", src=`${path}/src/js/common.ui.js`)\n    "
+        }
+    ]
+}

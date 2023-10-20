@@ -1,0 +1,26 @@
+{
+    "sourceFile": "dev/src/html/_includes/header.pug",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1697677473391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697677505985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     gnb.header-gnb\n       button.button-gnb(type=\"button\")\n       ul.menu-box\n         li.menu-list\n-          a.font-style-18(href=\"#\") N월 이벤트\n+          a.font-style-18(href=\"#\") documentation\n         li.menu-list\n-          a.font-style-18(href=\"#\") 지점 위치\n+          a.font-style-18(href=\"#\") blog\n         li.menu-list\n-          a.font-style-18(href=\"#\") 패파 소개\n\\ No newline at end of file\n+          a.font-style-18(href=\"#\") github\n         li.menu-list.on\n-          a.font-style-18(href=\"#\") 비용 문의\n+          a.font-style-18(href=\"#\") project\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697677813542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     gnb.header-gnb\n       button.button-gnb(type=\"button\")\n       ul.menu-box\n         li.menu-list\n-          a.font-style-18(href=\"#\") documentation\n+          a.font-style-18(href=\"#\") Documentation\n         li.menu-list\n           a.font-style-18(href=\"#\") blog\n         li.menu-list\n-          a.font-style-18(href=\"#\") github\n+          a.font-style-18(href=\"#\") Github\n\\ No newline at end of file\n         li.menu-list.on\n-          a.font-style-18(href=\"#\") project\n+          a.font-style-18(href=\"#\") Project\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697677473391,
+            "name": "Commit-0",
+            "content": "header#header\n  .header-inner\n    .logo\n      h1.title-h1\n        a(href=\"#\") \n          img(src=\"\", alt=\"\")\n    gnb.header-gnb\n      button.button-gnb(type=\"button\")\n      ul.menu-box\n        li.menu-list\n          a.font-style-18(href=\"#\") N월 이벤트\n        li.menu-list\n          a.font-style-18(href=\"#\") 지점 위치\n        li.menu-list\n          a.font-style-18(href=\"#\") 패파 소개\n        li.menu-list.on\n          a.font-style-18(href=\"#\") 비용 문의"
+        }
+    ]
+}
