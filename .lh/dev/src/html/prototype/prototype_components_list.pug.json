@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dev/src/html/prototype/prototype_components_list.pug",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698042197491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698042197491,
+            "name": "Commit-0",
+            "content": "extends ../_extends/extends_html5_prototype.pug\n\nblock variables\n  - var title = '컴포넌트'\n\nblock content\n  main\n    header.cl-header\n      h1 컴포넌트\n    .prototype-menu\n      ul\n        li\n          a(href=`${path}/src/html/cl.html`) 페이지 리스트\n        li\n          a(href=`${path}/src/html/prototype/prototype_list.html`) 프로토타입\n        li\n          a(href=`${path}/src/html/prototype/prototype_layout.html`) 레이아웃\n        li\n          a(href=`${path}/src/html/prototype/prototype_form.html`) 폼 양식\n        li.active\n          a(href=`${path}/src/html/prototype/prototype_components_list.html`) 컴포넌트\n    .prototype-list\n      ul\n        li.active\n          a(href=\"#\") Accordion\n        li\n          a(href=\"#\") Tabs\n        li\n          a(href=\"#\") Slides\n        li\n          a(href=\"#\") Popup\n"
+        }
+    ]
+}

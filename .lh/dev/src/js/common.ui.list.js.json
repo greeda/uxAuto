@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1697588383417,
@@ -12,6 +12,14 @@
                 {
                     "date": 1697588824512,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { UISwiper } from './components';\n+import { UISwiper } from './components/index.js';\n \n const commonUiList = [\n   {\n     className: '.ui-swiper',\n"
+                },
+                {
+                    "date": 1698023193917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n-import { UISwiper } from './components/index.js';\n+import { UISwiper, Popup } from './components/index.js';\n \n const commonUiList = [\n   {\n+    className: '.ui-popup',\n+    classObject: Popup\n+  },\n+  {\n     className: '.ui-swiper',\n     classObject: UISwiper\n   },\n ]\n"
+                },
+                {
+                    "date": 1698035217418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-import { UISwiper, Popup } from './components/index.js';\n+import { UISwiper, PopupExternal } from './components/index.js';\n \n const commonUiList = [\n   {\n     className: '.ui-popup',\n-    classObject: Popup\n+    classObject: PopupExternal\n   },\n   {\n     className: '.ui-swiper',\n     classObject: UISwiper\n"
                 }
             ],
             "date": 1697588383417,

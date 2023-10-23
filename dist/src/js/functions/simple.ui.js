@@ -51,7 +51,6 @@ export function refreshUI(force = false) {
         }
         const Class = ui.classObject;
         const options = {...el.dataset};
-        console.log(options);
         const uiInstance = new Class(el, options);
         UiMap.set(el, uiInstance);
       }

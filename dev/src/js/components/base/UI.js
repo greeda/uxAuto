@@ -6,15 +6,19 @@ class UI {
   $el;
   uiId;
   eventId;
+  $container;
+  $document;
+  $html;
 
   constructor(name, el) {
     this.name = name;
     this.el = el;
-    this.$el = $(el);
-
+    // this.$el = $(el);
+    this.$container = document.querySelector('#container');
+    
     this.setEventId();
   }
-
+  
   init() {
 
   }

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dev/src/html/prototype/prototype_layout.pug",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698042203435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698042203435,
+            "name": "Commit-0",
+            "content": "extends ../_extends/extends_html5_prototype.pug\n\nblock content\n  main\n    header.cl-header\n      h1 레이아웃\n    .prototype-menu\n      ul\n        li\n          a(href=`${path}/src/html/cl.html`) 페이지 리스트\n        li\n          a(href=`${path}/src/html/prototype/prototype_list.html`) 프로토타입\n        li.active\n          a(href=`${path}/src/html/prototype/prototype_layout.html`) 레이아웃\n        li\n          a(href=`${path}/src/html/prototype/prototype_form.html`) 폼 양식\n        li\n          a(href=`${path}/src/html/prototype/prototype_components_list.html`) 컴포넌트\n    \n    .prototype-container\n      section.prototype-section\n        p.subsrc # BreakPoints\n          i.caption Desktop : media (min-width: 1024px)\n          i.caption Tablet  : media (max-width: 1023px)\n          i.caption Mobile  : media (max-width: 767px)\n\n      section.prototype-section\n        p.subsrc # Header\n        include ../_includes/header.pug\n      section.prototype-section\n        p.subsrc # Footer\n        include ../_includes/footer.pug"
+        }
+    ]
+}

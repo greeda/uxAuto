@@ -1,0 +1,46 @@
+{
+    "sourceFile": "dev/src/js/components/base/UI.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1698026036616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698034693478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,15 @@\n   constructor(name, el) {\n     this.name = name;\n     this.el = el;\n     this.$el = $(el);\n-    this.$container = document.querySelector('#container');\n-\n+    \n     this.setEventId();\n+    this.init();\n   }\n-\n+  \n   init() {\n+    this.$container = document.querySelector('#container');\n \n   }\n \n   setEventId() {\n"
+                },
+                {
+                    "date": 1698034710236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     this.init();\n   }\n   \n   init() {\n+    console.log('23123');\n     this.$container = document.querySelector('#container');\n \n   }\n \n"
+                },
+                {
+                    "date": 1698034762256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\n   \n   init() {\n     console.log('23123');\n-    this.$container = document.querySelector('#container');\n+    // this.$container = document.querySelector('#container');\n \n   }\n \n   setEventId() {\n"
+                },
+                {
+                    "date": 1698035785215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,9 @@\n     this.init();\n   }\n   \n   init() {\n-    console.log('23123');\n-    // this.$container = document.querySelector('#container');\n+    this.$container = document.querySelector('#container');\n \n   }\n \n   setEventId() {\n"
+                },
+                {
+                    "date": 1698035914483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,14 @@\n   constructor(name, el) {\n     this.name = name;\n     this.el = el;\n     this.$el = $(el);\n+    this.$container = document.querySelector('#container');\n     \n     this.setEventId();\n-    this.init();\n   }\n   \n   init() {\n-    this.$container = document.querySelector('#container');\n \n   }\n \n   setEventId() {\n"
+                },
+                {
+                    "date": 1698036481747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n   constructor(name, el) {\n     this.name = name;\n     this.el = el;\n-    this.$el = $(el);\n+    // this.$el = $(el);\n     this.$container = document.querySelector('#container');\n     \n     this.setEventId();\n   }\n"
+                },
+                {
+                    "date": 1698039506667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n   $el;\n   uiId;\n   eventId;\n   $container;\n+  $document;\n+  $html;\n \n   constructor(name, el) {\n     this.name = name;\n     this.el = el;\n"
+                }
+            ],
+            "date": 1698026036616,
+            "name": "Commit-0",
+            "content": "\n\nclass UI {\n  name = 'ui';\n  el;\n  $el;\n  uiId;\n  eventId;\n  $container;\n\n  constructor(name, el) {\n    this.name = name;\n    this.el = el;\n    this.$el = $(el);\n    this.$container = document.querySelector('#container');\n\n    this.setEventId();\n  }\n\n  init() {\n\n  }\n\n  setEventId() {\n    this.uiId = `${this.name}-${this.getRandomStr()}`;\n    this.eventId = `.${this.uiId}`;\n  }\n\n  getRandomStr() {\n    return Math.round(Math.random() * 100000);\n  }\n\n  parseOptions(options) {\n    let splitString;\n    let numberArray = [];\n\n    if(typeof options.no == 'string') {\n      splitString = options.no.split(',');\n\n      splitString.map((item) => {\n        numberArray.push(+item);\n      });\n\n      options.no = numberArray;\n    }\n\n    return options;\n  }\n\n\n}\n\nexport default UI;"
+        }
+    ]
+}

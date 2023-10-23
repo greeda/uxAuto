@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dev/src/js/functions/simple.ui.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698026866618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698026866618,
+            "name": "Commit-0",
+            "content": "import commonUiList from \"/src/js/common.ui.list.js\";\n\nexport const UiMap = new WeakMap();\n\nexport function clTabsHandler() {\n  const tabList = document.querySelectorAll(\".prototype-list li\");\n  let activeList = document.querySelector(\".prototype-list li.active\");\n\n  tabList.forEach((list) => {\n    list.addEventListener(\"click\", (e) => {\n      if (activeList) activeList.classList.remove(\"active\");\n      activeList = e.currentTarget;\n      activeList.classList.add(\"active\");\n    });\n  });\n}\n\nexport function familySiteSelectHandler() {\n  const footerEl = document.querySelector(\"#footer\");\n  const selectBtn = document.querySelector(\".ui-select .btn-select\");\n  let isActive = false;\n\n  if (footerEl) {\n    selectBtn.addEventListener(\"click\", (e) => {\n      isActive = !isActive;\n      bindEvents(isActive);\n    });\n\n    selectBtn.addEventListener(\"focusout\", (e) => {\n      isActive = false;\n      bindEvents(isActive);\n    });\n\n    function bindEvents(isActive) {\n      if (isActive) {\n        selectBtn.parentNode.classList.add(\"active\");\n      } else {\n        selectBtn.parentNode.classList.remove(\"active\");\n      }\n    }\n  }\n}\n\nexport function refreshUI(force = false) {\n  commonUiList.forEach((ui) => {\n    let elements = document.querySelectorAll(ui.className);\n\n    elements.forEach((el) => {\n      if (force || !el.dataset.ui) {\n        if (!el.dataset.ui) {\n        }\n        const Class = ui.classObject;\n        const options = {...el.dataset};\n        const uiInstance = new Class(el, options);\n        UiMap.set(el, uiInstance);\n      }\n    });\n  });\n}\n"
+        }
+    ]
+}

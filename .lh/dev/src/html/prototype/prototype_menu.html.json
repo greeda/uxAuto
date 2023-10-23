@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dev/src/html/prototype/prototype_menu.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698042210567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698042210567,
+            "name": "Commit-0",
+            "content": "<div class=\"prototype-menu\">\n  <ul>\n    <li class=\"active\"><a href=`${path}/src/html/cl.html`>페이지 리스트</a></li>\n    <li><a href=`${path}/src/html/prototype/prototype_list.html`>프로토타입</a></li>\n    <li><a href=`${path}/src/html/prototype/prototype_form.html`>폼 양식</a></li>\n    <li><a href=`${path}/src/html/prototype/prototype_components_list.html`>컴포넌트</a></li>\n  </ul>\n</div>"
+        }
+    ]
+}

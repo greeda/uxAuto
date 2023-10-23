@@ -1,3 +1,10 @@
+import Popup from './base/Popup.js';
 import UISwiper from "./UISwiper.js";
+import PopupExternal from './PopupExternal.js';
 
-export { UISwiper };
+export {
+  Popup,
+
+  PopupExternal,
+  UISwiper,
+};

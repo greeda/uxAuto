@@ -1,0 +1,94 @@
+{
+    "sourceFile": "dev/src/js/components/PopupExternal.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1698035263401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698035271093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Popup from './base/Popup';\n+import Popup from './base/Popup.js';\n \n export default class PopupExternal extends Popup {\n   constructor(el, options) {\n     super('popupexternal', el);\n"
+                },
+                {
+                    "date": 1698035343048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n \n   }\n \n   init(el, options) {\n-    this.popup\n+    \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035403850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,12 @@\n export default class PopupExternal extends Popup {\n   constructor(el, options) {\n     super('popupexternal', el);\n \n-\n+    this.init(el, options);\n   }\n \n   init(el, options) {\n-    \n+    this.popupInit(el, options);\n+    console.log(el);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035759306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   }\n \n   init(el, options) {\n     this.popupInit(el, options);\n-    console.log(el);\n+    \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035769770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   }\n \n   init(el, options) {\n     this.popupInit(el, options);\n-    \n+    console.log(this.$container);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035775486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   }\n \n   init(el, options) {\n     this.popupInit(el, options);\n-    console.log(this.$container);\n+    \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698036054714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n \n   init(el, options) {\n     this.popupInit(el, options);\n     \n+    console.log(this.getRandomStr());\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698036202877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,7 @@\n   init(el, options) {\n     this.popupInit(el, options);\n     \n     console.log(this.getRandomStr());\n+    console.log(el);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698036208654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n   init(el, options) {\n     this.popupInit(el, options);\n     \n     console.log(this.getRandomStr());\n-    console.log(el);\n+    console.log(this.$container);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698036459682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,7 @@\n   }\n \n   init(el, options) {\n     this.popupInit(el, options);\n-    \n-    console.log(this.getRandomStr());\n-    console.log(this.$container);\n+\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698037520241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,15 @@\n \n   init(el, options) {\n     this.popupInit(el, options);\n \n+\n   }\n+\n+  render() {\n+    if(!this.$popup) {\n+      this.$popup = this.$el;\n+      this.$el = undefined;\n+      this.$popup.setAttribute('data-id', this.uiId);\n+    }\n+  }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698037527343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   init(el, options) {\n     this.popupInit(el, options);\n \n-\n+    this.render();\n   }\n \n   render() {\n     if(!this.$popup) {\n"
+                },
+                {
+                    "date": 1698037546519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n   render() {\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n+      console.log(this.$popup);\n       this.$popup.setAttribute('data-id', this.uiId);\n     }\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698037601875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n       console.log(this.$popup);\n-      this.$popup.setAttribute('data-id', this.uiId);\n+      // this.$popup.setAttribute('data-id', this.uiId);\n+      console.log(this.$popup);\n     }\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698038855442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n       console.log(this.$popup);\n-      // this.$popup.setAttribute('data-id', this.uiId);\n+      this.$popup.setAttribute('data-id', this.uiId);\n       console.log(this.$popup);\n     }\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698038862625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n       console.log(this.$popup);\n-      this.$popup.setAttribute('data-id', this.uiId);\n+      // this.$popup.setAttribute('data-id', this.uiId);\n       console.log(this.$popup);\n     }\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698038869925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n       console.log(this.$popup);\n+      console.log(this.$el);\n       // this.$popup.setAttribute('data-id', this.uiId);\n       console.log(this.$popup);\n     }\n   }\n"
+                },
+                {
+                    "date": 1698039024785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Popup from './base/Popup.js';\n \n export default class PopupExternal extends Popup {\n   constructor(el, options) {\n-    super('popupexternal', el);\n+    super('popupExternal', el);\n \n     this.init(el, options);\n   }\n \n@@ -17,9 +17,10 @@\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n       console.log(this.$popup);\n-      console.log(this.$el);\n+      console.log(this.$el)\n+      ;\n       // this.$popup.setAttribute('data-id', this.uiId);\n       console.log(this.$popup);\n     }\n   }\n"
+                },
+                {
+                    "date": 1698039091283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,9 @@\n     if(!this.$popup) {\n       this.$popup = this.$el;\n       this.$el = undefined;\n       console.log(this.$popup);\n-      console.log(this.$el)\n-      ;\n+      console.log(this.$el);\n       // this.$popup.setAttribute('data-id', this.uiId);\n       console.log(this.$popup);\n     }\n   }\n"
+                }
+            ],
+            "date": 1698035263401,
+            "name": "Commit-0",
+            "content": "import Popup from './base/Popup';\n\nexport default class PopupExternal extends Popup {\n  constructor(el, options) {\n    super('popupexternal', el);\n\n\n  }\n\n  init(el, options) {\n    this.popup\n  }\n}"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dev/src/html/prototype/prototype_form.pug",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698042187908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698042187908,
+            "name": "Commit-0",
+            "content": "extends ../_extends/extends_html5_prototype.pug\n\nblock variables\n  - var title = '폼 양식'\n\nblock content\n  main\n    header.cl-header\n      h1 폼 양식\n    .prototype-menu\n      ul\n        li\n          a(href=`${path}/src/html/cl.html`) 페이지 리스트\n        li\n          a(href=`${path}/src/html/prototype/prototype_list.html`) 프로토타입\n        li\n          a(href=`${path}/src/html/prototype/prototype_layout.html`) 레이아웃\n        li.active\n          a(href=`${path}/src/html/prototype/prototype_form.html`) 폼 양식\n        li\n          a(href=`${path}/src/html/prototype/prototype_components_list.html`) 컴포넌트\n"
+        }
+    ]
+}

@@ -1,3 +1,5 @@
+import commonUiList from './common.ui.list.js';
+import { Popup } from './components/index.js';
 
 import {
   refreshUI,
@@ -7,6 +9,7 @@ import {
 } from './functions/simple.ui.js';
 
 let frontUI = {
+  Popup,
   refreshUI,
 };
 
@@ -15,7 +18,10 @@ window.frontAPI = UiMap;
 
 
 function init() {
+  Popup.loadInit();
+
   refreshUI();
+
   clTabsHandler();
   familySiteSelectHandler();
 };

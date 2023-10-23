@@ -1,0 +1,182 @@
+{
+    "sourceFile": "dev/src/js/components/base/Popup.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 41,
+            "patches": [
+                {
+                    "date": 1698023101233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698023137647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,13 @@\n import UI from './UI';\n \n export default class Popup extends UI {\n-  \n+  constructor(el, options) {\n+    super(\"Popup\", el);\n+\n+\n+  }\n+\n+  init = function() {\n+    \n+  }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698023143848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \n \n   }\n \n-  init = function() {\n-    \n+  init() {\n+\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698023157044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,13 @@\n export default class Popup extends UI {\n   constructor(el, options) {\n     super(\"Popup\", el);\n \n+    this.init() {\n \n+    }\n   }\n \n-  init() {\n+  init(el, options``) {\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698023168783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \n     }\n   }\n \n-  init(el, options``) {\n+  init(el, options) {\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698024835901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import UI from './UI';\n \n export default class Popup extends UI {\n-  constructor(el, options) {\n-    super(\"Popup\", el);\n+  static loadInit() {\n \n-    this.init() {\n-\n-    }\n   }\n \n+  /**\n+   * \n+   * @param {HTMLElement} html element\n+   * @param {object} options \n+   */\n   init(el, options) {\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698024891381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,14 @@\n import UI from './UI';\n \n export default class Popup extends UI {\n+  wrap;\n+\n   static loadInit() {\n+    wrap = document.querySelector('#wrap');\n \n+    \n+\n   }\n \n   /**\n    * \n"
+                },
+                {
+                    "date": 1698025253329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n \n   static loadInit() {\n     wrap = document.querySelector('#wrap');\n \n-    \n \n+\n   }\n \n   /**\n    * \n"
+                },
+                {
+                    "date": 1698025372824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n \n   static loadInit() {\n     wrap = document.querySelector('#wrap');\n \n+    console.log('!!');\n \n-\n   }\n \n   /**\n    * \n"
+                },
+                {
+                    "date": 1698025657094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import UI from './UI';\n+import UI from './UI.js';\n \n export default class Popup extends UI {\n   wrap;\n \n"
+                },
+                {
+                    "date": 1698025893110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default class Popup extends UI {\n   wrap;\n \n   static loadInit() {\n-    wrap = document.querySelector('#wrap');\n+    wrap = document.querySelector('#container');\n \n     console.log('!!');\n \n   }\n"
+                },
+                {
+                    "date": 1698025918020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default class Popup extends UI {\n   wrap;\n \n   static loadInit() {\n-    wrap = document.querySelector('#container');\n+    // wrap = document.querySelector('#container');\n \n     console.log('!!');\n \n   }\n"
+                },
+                {
+                    "date": 1698025926426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n   wrap;\n+  wrap = document.querySelector('#container');\n \n   static loadInit() {\n-    // wrap = document.querySelector('#container');\n \n     console.log('!!');\n \n   }\n"
+                },
+                {
+                    "date": 1698025932368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   wrap = document.querySelector('#container');\n \n   static loadInit() {\n \n-    console.log('!!');\n+    console.log(wrap);\n \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698025937464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  wrap;\n+  // wrap;\n   wrap = document.querySelector('#container');\n \n   static loadInit() {\n \n"
+                },
+                {
+                    "date": 1698025950812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,10 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  // wrap;\n-  wrap = document.querySelector('#container');\n+  wrap;\n \n   static loadInit() {\n-\n     console.log(wrap);\n \n   }\n \n"
+                },
+                {
+                    "date": 1698025956533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  wrap;\n+  wrap = null;\n \n   static loadInit() {\n     console.log(wrap);\n \n"
+                },
+                {
+                    "date": 1698026046220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,10 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  wrap = null;\n \n   static loadInit() {\n-    console.log(wrap);\n+    console.log($container);\n \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698026125445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-\n+  $container;\n   static loadInit() {\n-    console.log($container);\n+    console.log(this.$container);\n \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698026141884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n \n export default class Popup extends UI {\n   $container;\n   static loadInit() {\n+    this.$container = document.querySelector('#container');\n+    \n     console.log(this.$container);\n \n   }\n \n"
+                },
+                {
+                    "date": 1698026151721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n   $container;\n   static loadInit() {\n     this.$container = document.querySelector('#container');\n     \n-    console.log(this.$container);\n \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698026161112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   $container;\n   static loadInit() {\n     this.$container = document.querySelector('#container');\n     \n-\n+    console.log(this.$container);\n   }\n \n   /**\n    * \n"
+                },
+                {
+                    "date": 1698026168900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n \n export default class Popup extends UI {\n   $container;\n   static loadInit() {\n-    this.$container = document.querySelector('#container');\n     \n     console.log(this.$container);\n   }\n \n"
+                },
+                {
+                    "date": 1698026215546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  $container;\n   static loadInit() {\n     \n     console.log(this.$container);\n   }\n"
+                },
+                {
+                    "date": 1698026371132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n export default class Popup extends UI {\n   static loadInit() {\n     \n     console.log(this.$container);\n+\n   }\n \n   /**\n    * \n"
+                },
+                {
+                    "date": 1698034660885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n+  $container\n   static loadInit() {\n     \n     console.log(this.$container);\n \n"
+                },
+                {
+                    "date": 1698034671097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  $container\n+  $container;\n+\n   static loadInit() {\n-    \n+    console.log($container);  \n     console.log(this.$container);\n \n   }\n \n"
+                },
+                {
+                    "date": 1698034718580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n export default class Popup extends UI {\n   $container;\n \n   static loadInit() {\n-    console.log($container);  \n     console.log(this.$container);\n \n   }\n \n"
+                },
+                {
+                    "date": 1698034968308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n export default class Popup extends UI {\n   $container;\n \n   static loadInit() {\n-    console.log(this.$container);\n-\n+    console.log(this.el);\n+    \n   }\n \n   /**\n    * \n"
+                },
+                {
+                    "date": 1698034977757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default class Popup extends UI {\n   $container;\n \n   static loadInit() {\n-    console.log(this.el);\n+    console.log(this);\n     \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698035161826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n    * \n    * @param {HTMLElement} html element\n    * @param {object} options \n    */\n-  init(el, options) {\n+  init() {\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035352261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n    * \n    * @param {HTMLElement} html element\n    * @param {object} options \n    */\n-  init() {\n+  popupInit() {\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035367392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n    * \n    * @param {HTMLElement} html element\n    * @param {object} options \n    */\n-  popupInit() {\n+  popupInit(el ,options) {\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698035424299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default class Popup extends UI {\n   $container;\n \n   static loadInit() {\n-    console.log(this);\n+    // console.log(this);\n     \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698035449777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n   $container;\n \n   static loadInit() {\n     // console.log(this);\n+    console.log(this.$container);\n     \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698036227292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  $container;\n+  // $container;\n \n   static loadInit() {\n     // console.log(this);\n     console.log(this.$container);\n"
+                },
+                {
+                    "date": 1698036417425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n    * @param {HTMLElement} html element\n    * @param {object} options \n    */\n   popupInit(el ,options) {\n-\n+    console.log(el, options);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698036438832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n    * @param {HTMLElement} html element\n    * @param {object} options \n    */\n   popupInit(el ,options) {\n-    console.log(el, options);\n+    // console.log(el, options);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698036447342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   // $container;\n \n   static loadInit() {\n     // console.log(this);\n-    console.log(this.$container);\n+    console.log($container);\n     \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698039183942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  // $container;\n+  $ㅔㅐㅔ\n \n   static loadInit() {\n     // console.log(this);\n-    console.log($container);\n+    console.log(this.$container);\n     \n   }\n \n   /**\n"
+                },
+                {
+                    "date": 1698039196586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import UI from './UI.js';\n \n export default class Popup extends UI {\n-  $ㅔㅐㅔ\n+  $popup;\n+  $popupContainer;\n \n   static loadInit() {\n     // console.log(this);\n     console.log(this.$container);\n"
+                },
+                {
+                    "date": 1698039203077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n export default class Popup extends UI {\n   $popup;\n   $popupContainer;\n+  $dimm;\n \n   static loadInit() {\n     // console.log(this);\n     console.log(this.$container);\n"
+                }
+            ],
+            "date": 1698023101233,
+            "name": "Commit-0",
+            "content": "import UI from './UI';\n\nexport default class Popup extends UI {\n  \n}"
+        }
+    ]
+}
