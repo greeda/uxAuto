@@ -11,12 +11,14 @@ html(lang="ko")
     block css
   body
     div#wrap
+      a.skipnav(href="#main") 주요 콘텐츠로 건너뛰기
 
       include ../_includes/header.pug
-      
+
       div#container
-        a.skipnav(href="#main") 주요 콘텐츠로 건너뛰기
+        include ../_includes/aside.pug
         block content
+
     
     //- include ../_includes/footer.pug
     

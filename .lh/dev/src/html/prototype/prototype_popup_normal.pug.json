@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1698042296415,
@@ -36,6 +36,10 @@
                 {
                     "date": 1698105221088,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,17 @@\n block variables\n   - var title = 'index'\n \n block content \n-  main#main.index-main\n+  main.main\n     aside.component-aisde\n       ul.component-list\n         li\n           a(href=\"#\") Popup\n         li\n           a(href=\"#\") Accordion\n-    #container\n-      .container-inner\n+    .contents\n+      .containes-inner\n \n         .popup-group\n             .ui-popup.ui-popup-full\n               .popup-wrap\n"
+                },
+                {
+                    "date": 1698137340294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,8 @@\n   - var title = 'index'\n \n block content \n   main.main\n-    aside.component-aisde\n-      ul.component-list\n-        li\n-          a(href=\"#\") Popup\n-        li\n-          a(href=\"#\") Accordion\n     .contents\n       .containes-inner\n \n         .popup-group\n"
                 }
             ],
             "date": 1698042296415,

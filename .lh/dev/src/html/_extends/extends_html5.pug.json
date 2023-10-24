@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1697677447552,
@@ -16,6 +16,14 @@
                 {
                     "date": 1698105193672,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n     link(rel=\"stylesheet\", href=`${path}/src/css/common.css` type=\"text/css\")\n     block css\n   body\n     div#wrap\n+\n       include ../_includes/header.pug\n+      \n       div#container\n         a.skipnav(href=\"#main\") 주요 콘텐츠로 건너뛰기\n         block content\n     \n"
+                },
+                {
+                    "date": 1698137335988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,14 @@\n   body\n     div#wrap\n \n       include ../_includes/header.pug\n-      \n+\n       div#container\n         a.skipnav(href=\"#main\") 주요 콘텐츠로 건너뛰기\n+        include ../_includes/aside.pug\n         block content\n+\n     \n     //- include ../_includes/footer.pug\n     \n     //- include ../_includes/nudge.pug\n"
+                },
+                {
+                    "date": 1698137391012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n     link(rel=\"stylesheet\", href=`${path}/src/css/common.css` type=\"text/css\")\n     block css\n   body\n     div#wrap\n+      a.skipnav(href=\"#main\") 주요 콘텐츠로 건너뛰기\n \n       include ../_includes/header.pug\n \n       div#container\n-        a.skipnav(href=\"#main\") 주요 콘텐츠로 건너뛰기\n         include ../_includes/aside.pug\n         block content\n \n     \n"
                 }
             ],
             "date": 1697677447552,
