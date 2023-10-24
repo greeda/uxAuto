@@ -10,11 +10,13 @@ html(lang="ko")
     link(rel="stylesheet", href=`${path}/src/css/common.css` type="text/css")
     block css
   body
-    include ../_includes/header.pug
+    div#wrap
 
-    div#container
-      a.skipnav(href="#main") 주요 콘텐츠로 건너뛰기
-      block content
+      include ../_includes/header.pug
+      
+      div#container
+        a.skipnav(href="#main") 주요 콘텐츠로 건너뛰기
+        block content
     
     //- include ../_includes/footer.pug
     
