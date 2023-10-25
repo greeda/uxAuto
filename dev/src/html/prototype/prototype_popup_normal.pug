@@ -5,8 +5,14 @@ block variables
 
 block content 
   main.main
+    aside.component-aisde
+      ul.component-list
+        li
+          a(href="#") Popup
+        li
+          a(href="#") Accordion
     .contents
-      .containes-inner
+      .contents-inner
 
         .popup-group
             .ui-popup.ui-popup-full
@@ -218,4 +224,6 @@ block content
                       br
                   .popup-footer
                     .buttons-area
+                button(type="button").popup-close
+                  | 닫기
 
