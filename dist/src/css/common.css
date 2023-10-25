@@ -1335,19 +1335,236 @@ button.swiper-pagination-bullet {
   background-color: #0095F8;
 }
 
+#footer {
+  background-color: #23282C;
+}
+#footer .footer-inner .contents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .footer-inner .contents.block {
+  display: block;
+}
+#footer .footer-inner .contents.top {
+  border-bottom: 1px solid #2E3438;
+}
+#footer .footer-inner .contents.top .contents-inner {
+  padding: 1.6rem 0;
+}
+#footer .footer-inner .contents .contents-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 129.6rem;
+  margin: 0 auto;
+}
+#footer .footer-inner .contents:nth-child(2) .contents-inner {
+  display: flex;
+  padding: 2.7rem 0 6.8rem;
+}
+#footer .footer-inner .footer-logo {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+}
+#footer .footer-inner .footer-logo img {
+  width: 9.6em;
+}
+#footer .footer-inner .footer-content {
+  display: inline-flex;
+}
+#footer .footer-inner .footer-content .footer-content-list {
+  display: inline-flex;
+  align-items: center;
+}
+#footer .footer-inner .footer-content .footer-content-list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 0;
+  color: #aaaaaa;
+  font-weight: 600;
+}
+#footer .footer-inner .footer-content .footer-content-list a:hover {
+  color: #ffffff;
+}
+#footer .footer-inner .footer-content .footer-content-list a::before {
+  display: inline-flex;
+  content: "";
+  width: 1px;
+  height: 1.2rem;
+  margin-right: 2rem;
+  background: #40484F;
+}
+#footer .footer-inner .footer-content .footer-content-list:first-child a::before {
+  display: none;
+}
+#footer .footer-inner .family-box-area {
+  display: inline-flex;
+  width: 24rem;
+}
+#footer .footer-inner .family-box-area .ui-select {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  border: 1px solid #444444;
+  border-radius: 0.8rem;
+  background-color: #16191C;
+  transition: border-color 0.3s ease;
+}
+#footer .footer-inner .family-box-area .ui-select .btn-select {
+  width: 100%;
+  padding: 0.8rem 0 0.8rem 2rem;
+  color: #6D757C;
+  font-weight: 600;
+  text-align: left;
+}
+#footer .footer-inner .family-box-area .ui-select .select-area .select-box {
+  display: none;
+  position: absolute;
+  left: -1px;
+  bottom: 4.2rem;
+  width: 100%;
+  height: 24rem;
+  border: 1px solid #6D757C;
+  border-bottom: 1px solid #40484F;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: #16191C;
+  box-sizing: content-box;
+  overflow-y: auto;
+}
+#footer .footer-inner .family-box-area .ui-select .select-area .select-box .select-list a {
+  display: flex;
+  padding: 0.8rem 2rem;
+  color: #6D757C;
+  font-weight: 600;
+}
+#footer .footer-inner .family-box-area .ui-select .select-area .select-box .select-list a:hover {
+  color: #ffffff;
+}
+#footer .footer-inner .family-box-area .ui-select .select-area::after {
+  position: absolute;
+  top: 1.3rem;
+  right: 2rem;
+  display: flex;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(/src/images/icons/ico_footer_arr.png) no-repeat 0 0;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+#footer .footer-inner .family-box-area .ui-select.active {
+  border: 1px solid #6D757C;
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+#footer .footer-inner .family-box-area .ui-select.active .select-area .select-box {
+  display: block;
+}
+#footer .footer-inner .family-box-area .ui-select.active .select-area::after {
+  transform: rotate(0);
+}
+#footer .footer-inner .company-info .contac {
+  display: inline-flex;
+}
+#footer .footer-inner .company-info .contac a {
+  color: #6D757C;
+  align-items: center;
+}
+#footer .footer-inner .company-info .mail {
+  display: inline-flex;
+  margin-left: 1.1rem;
+}
+#footer .footer-inner .address-1,
+#footer .footer-inner .address-2 {
+  margin-top: 0.6rem;
+}
+#footer .footer-inner .address-1 ul,
+#footer .footer-inner .address-2 ul {
+  display: flex;
+}
+#footer .footer-inner .address-1 ul li,
+#footer .footer-inner .address-2 ul li {
+  display: inline-flex;
+  padding-right: 1.2rem;
+  color: #6D757C;
+  align-items: center;
+}
+#footer .footer-inner .address-1 ul li::before,
+#footer .footer-inner .address-2 ul li::before {
+  display: inline-flex;
+  content: "";
+  width: 1px;
+  height: 1.2rem;
+  margin-right: 1rem;
+  background: #40484F;
+}
+#footer .footer-inner .address-1 ul li:first-child::before,
+#footer .footer-inner .address-2 ul li:first-child::before {
+  display: none;
+}
+#footer .footer-inner .address-1 ul li a,
+#footer .footer-inner .address-2 ul li a {
+  color: #6D757C;
+}
+#footer .footer-inner .address-1 ul li a:hover,
+#footer .footer-inner .address-2 ul li a:hover {
+  color: #ffffff;
+}
+#footer .footer-inner .social-area {
+  display: flex;
+  align-items: flex-end;
+}
+#footer .footer-inner .social-area ul {
+  display: flex;
+}
+#footer .footer-inner .social-area li {
+  display: inline-flex;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+#footer .footer-inner .social-area li + li {
+  margin-left: 1.2rem;
+}
+#footer .footer-inner .social-area li a {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+#footer .footer-inner .social-area li a.ico-facebook {
+  background: url(/src/images/icons/ico_footer_facebook.png) no-repeat 0 0;
+  background-size: cover;
+}
+#footer .footer-inner .social-area li a.ico-instagram {
+  background: url(/src/images/icons/ico_footer_instagram.png) no-repeat 0 0;
+  background-size: cover;
+}
+#footer .footer-inner .social-area li a.ico-youtube {
+  background: url(/src/images/icons/ico_footer_youtube.png) no-repeat 0 0;
+  background-size: cover;
+}
+#footer .footer-inner .social-area li a.ico-naver {
+  background: url(/src/images/icons/ico_footer_naver.png) no-repeat 0 0;
+  background-size: cover;
+}
+#footer .footer-inner .social-area li a.ico-brunch {
+  background: url(/src/images/icons/ico_footer_brunch.png) no-repeat 0 0;
+  background-size: cover;
+}
+
 .ui-popup {
   position: fixed;
+  background-color: #fff;
+}
+.ui-popup.ui-popup-full {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
 }
-
-.popup-wrap .popup-container {
+.ui-popup .popup-wrap {
   overflow: hidden;
 }
-.popup-wrap .popup-container {
+.ui-popup .popup-container {
   height: 100vh;
   overflow-y: auto;
 }

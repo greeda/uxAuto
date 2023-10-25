@@ -124,27 +124,294 @@ $path: getPath();
   }
 }
 
+#footer {
+  background-color: #23282C;
 
+  .footer-inner {
+    // width: 129.6rem;
+    // margin: 0 auto;
 
-//popup
-.popup-group {
+    .contents {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
 
+      &.block {
+        display: block;
+      }
+
+      &.top {
+        border-bottom: 1px solid #2E3438;
+
+        .contents-inner {
+          padding: 1.6rem 0;
+        }
+      }
+
+      .contents-inner {
+        display: flex;
+        justify-content: space-between;
+        width: 129.6rem;
+        margin: 0 auto;
+      }
+
+      &:nth-child(2) .contents-inner {
+        display: flex;
+        padding: 2.7rem 0 6.8rem;
+      }
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      margin-bottom: 0.8rem;
+
+      img {
+        width: 9.6em;
+      }
+    }
+
+    .footer-content {
+      display: inline-flex;
+
+      .footer-content-list {
+        display: inline-flex;
+        align-items: center;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          padding: 1rem 2rem 1rem 0;
+          color: #aaaaaa;
+          font-weight: 600;
+
+          &:hover {
+            color: #ffffff;
+          }
+
+          &::before {
+            display: inline-flex;
+            content: "";
+            width: 1px;
+            height: 1.2rem;
+            margin-right: 2rem;
+            background: #40484F;
+          }
+        }
+
+        &:first-child a::before {
+          display: none;
+        }
+      }
+    }
+
+    .family-box-area {
+      display: inline-flex;
+      width: 24rem;
+
+      .ui-select {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        border: 1px solid #444444;
+        border-radius: .8rem;
+        background-color: #16191C;
+        transition: border-color .3s ease;
+
+        .btn-select {
+          width: 100%;
+          padding: .8rem 0 .8rem 2rem;
+          color: #6D757C;
+          font-weight: 600;
+          text-align: left;
+        }
+
+        .select-area {
+          .select-box {
+            display: none;
+            position: absolute;
+            left: -1px;
+            bottom: 4.2rem;
+            width: 100%;
+            height: 24rem;
+            border: 1px solid #6D757C;
+            border-bottom: 1px solid #40484F;
+            border-radius: .8rem .8rem 0 0;
+            background-color: #16191C;
+            box-sizing: content-box;
+            overflow-y: auto;
+
+            .select-list {
+              a {
+                display: flex;
+                padding: .8rem 2rem;
+                color: #6D757C;
+                font-weight: 600;
+
+                &:hover {
+                  color: #ffffff;
+                }
+              }
+            }
+          }
+
+          &::after {
+            position: absolute;
+            top: 1.3rem;
+            right: 2rem;
+            display: flex;
+            content: "";
+            width: 1.6rem;
+            height: 1.6rem;
+            background: url(#{$path}/src/images/icons/ico_footer_arr.png) no-repeat 0 0;
+            background-size: cover;
+            transform: rotate(180deg);
+          }
+        }
+
+        &.active {
+          border: 1px solid #6D757C;
+          border-radius: 0 0 .8rem .8rem;
+
+          .select-area {
+            .select-box {
+              display: block;
+            }
+
+            &::after {
+              transform: rotate(0);
+            }
+          }
+        }
+      }
+    }
+
+    .company-info {
+      .contac {
+        display: inline-flex;
+
+        a {
+          color: #6D757C;
+          align-items: center;
+        }
+      }
+
+      .mail {
+        display: inline-flex;
+        margin-left: 1.1rem;
+      }
+    }
+
+    .address-1,
+    .address-2 {
+      margin-top: .6rem;
+
+      ul {
+        display: flex;
+
+        li {
+          display: inline-flex;
+          padding-right: 1.2rem;
+          color: #6D757C;
+          align-items: center;
+
+          &::before {
+            display: inline-flex;
+            content: "";
+            width: 1px;
+            height: 1.2rem;
+            margin-right: 1rem;
+            background: #40484F;
+          }
+
+          &:first-child {
+            &::before {
+              display: none;
+            }
+          }
+
+          a {
+            color: #6D757C;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    .social-area {
+      display: flex;
+      align-items: flex-end;
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        display: inline-flex;
+        width: 2.8rem;
+        height: 2.8rem;
+
+        &+li {
+          margin-left: 1.2rem;
+        }
+
+        a {
+          display: inline-flex;
+          width: 100%;
+          height: 100%;
+
+          &.ico-facebook {
+            background: url(#{$path}/src/images/icons/ico_footer_facebook.png) no-repeat 0 0;
+            background-size: cover;
+          }
+
+          &.ico-instagram {
+            background: url(#{$path}/src/images/icons/ico_footer_instagram.png) no-repeat 0 0;
+            background-size: cover;
+          }
+
+          &.ico-youtube {
+            background: url(#{$path}/src/images/icons/ico_footer_youtube.png) no-repeat 0 0;
+            background-size: cover;
+          }
+
+          &.ico-naver {
+            background: url(#{$path}/src/images/icons/ico_footer_naver.png) no-repeat 0 0;
+            background-size: cover;
+          }
+
+          &.ico-brunch {
+            background: url(#{$path}/src/images/icons/ico_footer_brunch.png) no-repeat 0 0;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
 }
+
+
+//Popup
 
 .ui-popup {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
   background-color: #fff;
-}
-
-.popup-wrap {
-  .popup-container {
+  &.ui-popup-full {
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+  .popup-wrap {
     overflow: hidden;
   }
-
   .popup-container {
     height: 100vh;
     overflow-y: auto;
+
+    .popup-content {
+
+
+    }
   }
 }
-
