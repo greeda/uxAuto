@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1697677473391,
@@ -16,6 +16,18 @@
                 {
                     "date": 1697677813542,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     gnb.header-gnb\n       button.button-gnb(type=\"button\")\n       ul.menu-box\n         li.menu-list\n-          a.font-style-18(href=\"#\") documentation\n+          a.font-style-18(href=\"#\") Documentation\n         li.menu-list\n           a.font-style-18(href=\"#\") blog\n         li.menu-list\n-          a.font-style-18(href=\"#\") github\n+          a.font-style-18(href=\"#\") Github\n\\ No newline at end of file\n         li.menu-list.on\n-          a.font-style-18(href=\"#\") project\n+          a.font-style-18(href=\"#\") Project\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698901074667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n     .logo\n       h1.title-h1\n         a(href=\"#\") \n           img(src=\"\", alt=\"\")\n+        strong pf\n     gnb.header-gnb\n       button.button-gnb(type=\"button\")\n       ul.menu-box\n         li.menu-list\n"
+                },
+                {
+                    "date": 1698901209013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n       h1.title-h1\n         a(href=\"#\") \n           img(src=\"\", alt=\"\")\n         strong pf\n+          i.ver v0.0.1\n     gnb.header-gnb\n       button.button-gnb(type=\"button\")\n       ul.menu-box\n         li.menu-list\n"
+                },
+                {
+                    "date": 1698910609285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     .logo\n       h1.title-h1\n         a(href=\"#\") \n           img(src=\"\", alt=\"\")\n-        strong pf\n+        strong.text pf\n           i.ver v0.0.1\n     gnb.header-gnb\n       button.button-gnb(type=\"button\")\n       ul.menu-box\n"
                 }
             ],
             "date": 1697677473391,

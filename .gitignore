@@ -397,6 +397,14 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 dist
 .lh
+=======
+dist/
+>>>>>>> bc70412 (update)
+=======
+dist/
+>>>>>>> 2acad2a (...)
