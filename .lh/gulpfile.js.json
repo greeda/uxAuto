@@ -3,11 +3,35 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1697590971799,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699858091552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n var path = require(\"path\");\n var projectRoot = path.resolve(__dirname, \"dev\");\n var uglify = require(\"gulp-uglify\");\n var babel = require(\"gulp-babel\");\n+const autoPrefixer = require('gulp-autoprefixer');\n \n const isProduction = process.env.NODE_ENV === \"production\";\n const $path = isProduction ? \"/wp-content/themes/fastfive-new\" : \"\";\n \n@@ -32,8 +33,11 @@\n };\n gulp.task(\"sass\", function () {\n   return gulp\n     .src(\"dev/src/css/**/*.scss\")\n+    .pipe(autoPrefixer, ({\n+      cascade: false\n+    }))\n     .pipe(\n       sass({\n         includePaths: [\"./node_modules\"],\n         functions: {\n"
+                },
+                {
+                    "date": 1699858235687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n var path = require(\"path\");\n var projectRoot = path.resolve(__dirname, \"dev\");\n var uglify = require(\"gulp-uglify\");\n var babel = require(\"gulp-babel\");\n-const autoPrefixer = require('gulp-autoprefixer');\n+import autoPrefixer from 'gulp-autoprefixer';\n \n const isProduction = process.env.NODE_ENV === \"production\";\n const $path = isProduction ? \"/wp-content/themes/fastfive-new\" : \"\";\n \n"
+                },
+                {
+                    "date": 1699858322540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n var path = require(\"path\");\n var projectRoot = path.resolve(__dirname, \"dev\");\n var uglify = require(\"gulp-uglify\");\n var babel = require(\"gulp-babel\");\n-import autoPrefixer from 'gulp-autoprefixer';\n+const autoPrefixer = require('gulp-autoprefixer');\n \n const isProduction = process.env.NODE_ENV === \"production\";\n const $path = isProduction ? \"/wp-content/themes/fastfive-new\" : \"\";\n \n@@ -33,11 +33,8 @@\n };\n gulp.task(\"sass\", function () {\n   return gulp\n     .src(\"dev/src/css/**/*.scss\")\n-    .pipe(autoPrefixer, ({\n-      cascade: false\n-    }))\n     .pipe(\n       sass({\n         includePaths: [\"./node_modules\"],\n         functions: {\n"
+                },
+                {
+                    "date": 1699858356569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n           },\n         },\n       })\n     )\n+    .pipe(autoPrefixer())\n     .pipe(gulp.dest(\"dist/src/css\"));\n });\n \n // 이미지 파일 복사\n"
+                },
+                {
+                    "date": 1699858393598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,12 +43,20 @@\n           },\n         },\n       })\n     )\n-    .pipe(autoPrefixer())\n     .pipe(gulp.dest(\"dist/src/css\"));\n });\n \n+export default () => (\n+\tgulp.src('src/**/*.css')\n+\t\t.pipe(sourcemaps.init())\n+\t\t.pipe(autoprefixer())\n+\t\t.pipe(concat('all.css'))\n+\t\t.pipe(sourcemaps.write('.'))\n+\t\t.pipe(gulp.dest('dist'))\n+);\n+\n // 이미지 파일 복사\n gulp.task(\"copy:images\", function () {\n   return gulp.src(\"dev/src/images/**/*\").pipe(gulp.dest(\"dist/src/images\"));\n });\n"
+                },
+                {
+                    "date": 1699858419636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n var path = require(\"path\");\n var projectRoot = path.resolve(__dirname, \"dev\");\n var uglify = require(\"gulp-uglify\");\n var babel = require(\"gulp-babel\");\n-const autoPrefixer = require('gulp-autoprefixer');\n \n const isProduction = process.env.NODE_ENV === \"production\";\n const $path = isProduction ? \"/wp-content/themes/fastfive-new\" : \"\";\n \n@@ -46,17 +45,8 @@\n     )\n     .pipe(gulp.dest(\"dist/src/css\"));\n });\n \n-export default () => (\n-\tgulp.src('src/**/*.css')\n-\t\t.pipe(sourcemaps.init())\n-\t\t.pipe(autoprefixer())\n-\t\t.pipe(concat('all.css'))\n-\t\t.pipe(sourcemaps.write('.'))\n-\t\t.pipe(gulp.dest('dist'))\n-);\n-\n // 이미지 파일 복사\n gulp.task(\"copy:images\", function () {\n   return gulp.src(\"dev/src/images/**/*\").pipe(gulp.dest(\"dist/src/images\"));\n });\n@@ -147,9 +137,9 @@\n \n   browserSync.init({\n     server: {\n       baseDir: [\"./dist\", \"./dev\"],\n-      index: \"src/html/index.html\",\n+      index: \"src/html/cl.html\",\n     },\n     port: 8888,\n   });\n });\n"
                 }
             ],
             "date": 1697590971799,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 28,
+            "activePatchIndex": 29,
             "patches": [
                 {
                     "date": 1697590870295,
@@ -120,6 +120,10 @@
                 {
                     "date": 1698890239756,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,7 @@\n                 i.ico(aria-hidden=\"true\")\n               .accordion-contents-info\n                 .accordion-contents-inner\n                   p.txt 내용...123\n-      .popup-group\n-        .popup-wrap\n-          .ui-popup\n+      //- .popup-group\n+      //-   .popup-wrap\n+      //-     .ui-popup\n"
+                },
+                {
+                    "date": 1699853441737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,18 @@\n                   p.txt 내용...123\n         section.component-box\n           .component-guide\n             h3.title-h3 Accoridon \n+            .table-wrap\n+              table\n+                tbody\n+                  tr\n+                    th Properties\n+                  tr\n+                    td methods\n+                    td type\n+                    td caption\n+\n             .text-area\n               p.txt 설명1\n               p.txt 설명2\n               p.txt 설명3\n"
                 }
             ],
             "date": 1697590870295,
