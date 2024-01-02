@@ -9,7 +9,7 @@
 # start
 * gulp
 
-## build
+# build
 * npm run build
   * gulpfile.js 
     * $path 변수에 실서버 경로 할당
